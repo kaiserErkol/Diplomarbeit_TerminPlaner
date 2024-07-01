@@ -1,0 +1,3 @@
+@Terminplaner_DropTables.sql
+@Terminplaner_1_CreateObjects.sql
+@Terminplaner_2_InsertData.sql
