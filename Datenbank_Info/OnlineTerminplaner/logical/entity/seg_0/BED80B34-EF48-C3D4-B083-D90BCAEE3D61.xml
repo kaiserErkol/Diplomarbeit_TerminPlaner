@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BED80B34-EF48-C3D4-B083-D90BCAEE3D61" name="Wartungsverlauf">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:04:38 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="734CA948-33CB-4826-C8B3-47A5E9876C3B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:04:48 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Datum" id="093F603F-20D7-8D7D-F006-1FF2F05E8D59">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:05:05 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Beschreibung" id="D923D9B0-B552-6A52-D519-3CCD7A899E36">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:05:14 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kosten" id="A3DE3FFB-501D-C064-C0C1-713DEC817D64">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:05:29 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NaechsterServiceDatum" id="297CE686-47C8-599B-48E4-9C512A3D88A7">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 16:31:38 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<engineerTo>
+<item key="6E460B92-F3A7-8CB1-C3EA-8E965D1B2C34" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

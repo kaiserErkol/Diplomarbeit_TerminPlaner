@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS termin_service;
+DROP TABLE IF EXISTS wartungseintrag;
+DROP TABLE IF EXISTS benachrichtigung;
+DROP TABLE IF EXISTS fahrzeug;
+DROP TABLE IF EXISTS termin;
+DROP TABLE IF EXISTS service;
+DROP TABLE IF EXISTS kunde;
+

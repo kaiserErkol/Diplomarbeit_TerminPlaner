@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F2EEDED-ED86-B684-5F58-9E019B2BBB74" name="Wartungsverlauf">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>BED80B34-EF48-C3D4-B083-D90BCAEE3D61</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0526DB49-362A-0307-4108-637F23ACF9DB">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>734CA948-33CB-4826-C8B3-47A5E9876C3B</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Datum" id="E3FF9072-02C7-3401-083B-D1A8F9894AB2">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>093F603F-20D7-8D7D-F006-1FF2F05E8D59</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Beschreibung" id="14FCCBA5-B06F-AF93-F084-40267580EA4D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>D923D9B0-B552-6A52-D519-3CCD7A899E36</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kosten" id="82603D9C-BF14-3839-5646-16C167BD7BC1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>A3DE3FFB-501D-C064-C0C1-713DEC817D64</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NaechsterServiceDatum" id="FAC5F1C2-4358-C0E5-D4F6-099C156430E2">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>297CE686-47C8-599B-48E4-9C512A3D88A7</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fahrzeug_Fahrzeug_ID" id="33396F39-D1A4-7011-EDD0-4BD77054E5F9">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B47DF7F3-4754-5223-FF7B-2D26F5E8FCEC" referredColumn="7854D1D2-5968-A39F-8A7F-D7EA78519702"/>
+</associations>
+</Column>
+<Column name="Service_Service_ID" id="B1311945-8533-B65B-1845-82327EB141E9">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18A1C46C-3F7A-9550-E3EF-913DFDFFDF10" referredColumn="B1C01CCD-85C1-7AA0-8940-A351DD653162"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B3A0C9F2-5E1F-8A07-5DCB-1F5DAEB9F40C" name="Wartungsverlauf_Fahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>501F2C35-4AEB-799A-CDD2-4E9E84E2D4C2</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33396F39-D1A4-7011-EDD0-4BD77054E5F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E00AA1C5-FA60-542F-4497-C1169B7280B6" name="Wartungsverlauf_Service_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 17:27:32 UTC</createdTime>
+<generatorID>2C226D0F-2EB8-C577-CD00-626E9455E34C</generatorID>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1311945-8533-B65B-1845-82327EB141E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

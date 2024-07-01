@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="8DA4F036-5CE8-650F-3E6C-AC9D405B1A75">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 15:39:16 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner_Rel</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

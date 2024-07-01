@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="OnlineTerminplaner" id="A32FB3CA-457A-49B2-39D3-5A01441CAC7D" version="3.5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-06-30 15:39:16 UTC</createdTime>
+<ownerDesignName>OnlineTerminplaner</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A32FB3CA-457A-49B2-39D3-5A01441CAC7D</designId>
+</OSDM_Design>
