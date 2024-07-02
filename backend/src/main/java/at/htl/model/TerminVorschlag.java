@@ -6,10 +6,9 @@ import jakarta.persistence.*;
 import java.sql.Time;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
-public class Termin {
+public class TerminVorschlag {
 
     @Id
     @GeneratedValue
@@ -20,9 +19,6 @@ public class Termin {
 
     @Column
     private Time Uhrzeit;
-
-    @Column
-    private TerminStatus Status;
 
     @Column
     private String Notizen;
@@ -37,23 +33,22 @@ public class Termin {
 
     @ManyToMany
     @JoinTable(
-            name = "termin_service",
-            joinColumns = @JoinColumn(name = "termin_id"),
+            name = "terminv_service",
+            joinColumns = @JoinColumn(name = "terminv_id"),
             inverseJoinColumns = @JoinColumn(name = "service_id")
     )
     private List<Service> services;
 
-
-    public Termin(Date datum, Time uhrzeit, TerminStatus status, String notizen, Kunde kunde, Mitarbeiter mitarbeiter) {
+    public TerminVorschlag(Long id, Date datum, Time uhrzeit, String notizen, Kunde kunde, Mitarbeiter mitarbeiter) {
+        this.id = id;
         Datum = datum;
         Uhrzeit = uhrzeit;
-        Status = status;
         Notizen = notizen;
         this.kunde = kunde;
         this.mitarbeiter = mitarbeiter;
     }
 
-    public Termin() {}
+    public TerminVorschlag() {}
 
     public Long getId() {
         return id;
@@ -77,14 +72,6 @@ public class Termin {
 
     public void setUhrzeit(Time uhrzeit) {
         Uhrzeit = uhrzeit;
-    }
-
-    public TerminStatus getStatus() {
-        return Status;
-    }
-
-    public void setStatus(TerminStatus status) {
-        Status = status;
     }
 
     public String getNotizen() {
@@ -117,18 +104,5 @@ public class Termin {
 
     public void setServices(List<Service> services) {
         this.services = services;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Termin termin = (Termin) o;
-        return Objects.equals(id, termin.id) && Objects.equals(Datum, termin.Datum) && Objects.equals(Uhrzeit, termin.Uhrzeit) && Status == termin.Status && Objects.equals(Notizen, termin.Notizen);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, Datum, Uhrzeit, Status, Notizen);
     }
 }
