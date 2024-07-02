@@ -30,9 +30,6 @@ public class Fahrzeug {
     private Kunde kunde;
 
     @OneToMany(mappedBy = "fahrzeug", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Termin> termine;
-
-    @OneToMany(mappedBy = "fahrzeug", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Wartungseintrag> wartungseintrag;
 
     public Fahrzeug(Kunde kunde, String kennzeichen, Date baujahr, String modell, String marke) {
@@ -91,14 +88,6 @@ public class Fahrzeug {
 
     public void setKunde(Kunde kunde) {
         this.kunde = kunde;
-    }
-
-    public List<Termin> getTermine() {
-        return termine;
-    }
-
-    public void setTermine(List<Termin> termine) {
-        this.termine = termine;
     }
 
     public List<Wartungseintrag> getWartungseintrag() {
