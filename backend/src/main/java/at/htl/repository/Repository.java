@@ -1,5 +1,6 @@
 package at.htl.repository;
 
+import at.htl.model.Kunde;
 import at.htl.model.Termin;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -18,5 +19,10 @@ public class Repository {
     @Transactional
     public List<Termin> getAllTermine() {
         return em.createQuery("SELECT t FROM Termin t", Termin.class).getResultList();
+    }
+
+    @Transactional
+    public List<Kunde> getAllKunden() {
+        return em.createQuery("SELECT k FROM Kunde k", Kunde.class).getResultList();
     }
 }
