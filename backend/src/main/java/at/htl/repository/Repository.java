@@ -26,3 +26,6 @@ public class Repository {
         return em.createQuery("SELECT k FROM Kunde k", Kunde.class).getResultList();
     }
 }
+
+
+//test 1
