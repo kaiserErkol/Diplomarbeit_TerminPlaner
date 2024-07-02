@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="7F9E2492-7448-A847-89D0-3E5EC4BE50E5" mainViewID="CBE5AD32-8E9D-A9F9-08D8-260D096ACE3F">
-<createdBy>macbook</createdBy>
-<createdTime>2024-06-30 15:39:16 UTC</createdTime>
-<ownerDesignName>OnlineTerminplaner</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</LogicalDesign>

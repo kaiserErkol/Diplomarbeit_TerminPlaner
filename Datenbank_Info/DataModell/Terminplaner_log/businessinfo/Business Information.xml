@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="F98936DC-E6BA-533B-2AE6-23BF9E5408F0">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:03:32 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

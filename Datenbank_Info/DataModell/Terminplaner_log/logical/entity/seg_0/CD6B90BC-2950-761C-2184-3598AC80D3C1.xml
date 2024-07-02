@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CD6B90BC-2950-761C-2184-3598AC80D3C1" name="Service">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:08:18 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Service_ID" id="20C5E63F-E29D-7633-FB20-A1348A6CBB10">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:08:23 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bezeichnung" id="0090E39C-D24B-8993-1464-75EFE302095C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:08:40 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Beschreibung" id="1F68DB71-3E91-C969-FAE8-E106A9ED2498">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:08:57 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DauerInStunden" id="7F261AF9-FDB4-6825-C6EE-71F08A0D3235">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:09:10 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kosten" id="9940A988-3F0F-EF31-4BD9-4153B374F58E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:09:25 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Serviceintervall" id="DABB36F6-BACB-4FA3-E431-08B9B39E6FE1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:09:36 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4EC5B9F5-DF1D-FB4B-07AC-448FCB70B260" name="Key_1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:10:22 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>20C5E63F-E29D-7633-FB20-A1348A6CBB10</newElementsIDs>
+<usedAttributes>
+<attributeRef>20C5E63F-E29D-7633-FB20-A1348A6CBB10</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

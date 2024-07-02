@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C323BDAF-F71D-FE61-B0B4-2699B81BDE56" name="Mitarbeiter">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>17A1DF96-1E63-7413-8323-548DD9938F5A</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Mitarbeiter_ID" id="5AF97A49-DC0C-AC8F-70AC-B2AB9ACA993E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>42D62B6A-CB18-1840-8935-A84599F26A36</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Vorname" id="B9A7C9E8-EF57-F183-F513-126F784B7F7F">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>CA112425-5596-76BF-E1EA-99FD4BE757AC</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nachname" id="E867DB59-1B35-8554-9BB6-C86DCA9C8AD3">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>6627D01C-7287-1253-8308-7686C175326E</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="442CB722-8D76-AEA6-726E-4E4D29F673D2">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>74FEF8E5-D637-9EDB-DA87-016CCC127F71</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefonnummer" id="C1704D41-450F-5C38-8797-5F84FCB7B3F4">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>739BB118-79E4-0D4B-CBBC-D3E675345FA2</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFA0A426-241E-5F1F-1ED9-6F5E9DC28584" name="Mitarbeiter_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:48:29 UTC</createdTime>
+<generatorID>1804C403-D4C9-244D-B072-3DF095EAAC91</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AF97A49-DC0C-AC8F-70AC-B2AB9ACA993E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

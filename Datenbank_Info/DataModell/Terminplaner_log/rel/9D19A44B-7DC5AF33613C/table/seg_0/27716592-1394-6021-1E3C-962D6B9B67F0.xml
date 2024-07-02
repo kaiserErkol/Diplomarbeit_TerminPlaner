@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="27716592-1394-6021-1E3C-962D6B9B67F0" name="Wartungsverlauf">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>969E8C73-4A7F-F49E-4A72-05FE6D002928</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Wartungsverlauf_ID" id="629969C2-A981-6259-D0D6-11D732A2601C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>D39FA218-6420-B9F2-2467-C73352E045B5</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Datum" id="83665D03-FC48-D059-568C-1CEE558170C6">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>71B89E9D-BEBC-7BF9-432D-8EFF8B1936EB</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Beschreibung" id="0A751EC8-F7F9-14D7-F31F-F623B1D35385">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>11D9E37A-3A92-F954-7A37-8FA824A2A02C</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kosten" id="52787D68-C84E-9B01-088F-E7129F1F2739">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>1DC65577-8F65-F17C-D3B5-68E39CBDBE61</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NaechsterServiceDatum" id="325C9E8A-A78B-49A8-CADF-07F4CEDB72CC">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>180E1C73-37F8-8309-9113-784D438A3568</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fahrzeug_Fahrzeug_ID" id="26460953-E3E2-7429-BFC7-6FC881C96570">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>7DB68BC3-A877-768C-4D13-B7412D0B8311</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5335BB3E-66A0-2333-3FFC-6595CA00F718" referredColumn="C425D677-64B3-7365-6FA0-2096D97F7445"/>
+</associations>
+</Column>
+<Column name="Service_Service_ID" id="1FEDC47D-3CE4-2DD9-413B-D9CDB94E875A">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>30817747-5A28-F063-DA5C-17AFF48D17E9</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8E6E5F43-F601-3180-9734-03F52885B176" referredColumn="258BB5B5-82E4-82A6-764A-DFECECC72D87"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="448D59AF-2F9E-3ED2-F4C3-1BEA51C0CE69" name="Wartungsverlauf_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>9DB5AAC0-9AE1-99A4-98DB-E361817D0D90</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="629969C2-A981-6259-D0D6-11D732A2601C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7379D95E-4FA2-6234-0DCE-DCF74D8C9039" name="Wartungsverlauf_Fahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>DAEAAEE0-3B2F-E469-2877-A20D27C8E756</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26460953-E3E2-7429-BFC7-6FC881C96570"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30697C3D-7B35-017B-68AF-BE4BC4F3A6D4" name="Wartungsverlauf_Service_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:18:18 UTC</createdTime>
+<generatorID>C191A620-64C1-C911-7008-CC382038EED7</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1FEDC47D-3CE4-2DD9-413B-D9CDB94E875A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

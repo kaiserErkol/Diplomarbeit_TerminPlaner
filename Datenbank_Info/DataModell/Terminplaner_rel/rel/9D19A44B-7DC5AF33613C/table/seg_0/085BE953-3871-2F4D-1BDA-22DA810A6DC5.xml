@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="085BE953-3871-2F4D-1BDA-22DA810A6DC5" name="Service">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>CD6B90BC-2950-761C-2184-3598AC80D3C1</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Service_ID" id="258BB5B5-82E4-82A6-764A-DFECECC72D87">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>20C5E63F-E29D-7633-FB20-A1348A6CBB10</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bezeichnung" id="031CD224-5D22-4094-9A04-E08E88EE1109">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>0090E39C-D24B-8993-1464-75EFE302095C</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Beschreibung" id="D000D327-12FB-F642-4435-0E4BEFDC9803">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>1F68DB71-3E91-C969-FAE8-E106A9ED2498</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DauerInStunden" id="FB73D249-39CF-8FD2-AA15-19C7F4C14F60">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>7F261AF9-FDB4-6825-C6EE-71F08A0D3235</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kosten" id="B8DFF11D-B8AD-D8A0-6502-DDF086FFD53B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>9940A988-3F0F-EF31-4BD9-4153B374F58E</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Serviceintervall" id="B9867E1C-6754-8EED-A387-7FDD60EC7641">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>DABB36F6-BACB-4FA3-E431-08B9B39E6FE1</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB91173F-100C-7938-6B6B-A6695939F2CD" name="Service_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-01 11:11:09 UTC</createdTime>
+<generatorID>4EC5B9F5-DF1D-FB4B-07AC-448FCB70B260</generatorID>
+<ownerDesignName>Terminplaner_rel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="258BB5B5-82E4-82A6-764A-DFECECC72D87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

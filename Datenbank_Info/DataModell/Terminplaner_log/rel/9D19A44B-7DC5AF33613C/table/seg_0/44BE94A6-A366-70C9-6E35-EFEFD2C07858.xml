@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44BE94A6-A366-70C9-6E35-EFEFD2C07858" name="TerminV_Service">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TerminV_TerminV_ID" id="BFD09F2F-0DE5-C1E6-454F-29792FA17354">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1365B76-8282-46AB-EFD7-CC24ACC07B26" referredColumn="E87771E8-F794-E859-D8F7-A0AD47474F78"/>
+</associations>
+</Column>
+<Column name="Service_Service_ID" id="F8E49405-FE90-FDE7-BF41-AC0C9CA107FA">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08593B51-A845-E64B-7831-F79C5A9F3CAF" referredColumn="258BB5B5-82E4-82A6-764A-DFECECC72D87"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FD0B0B2-DB94-077E-5E1F-558EFB335302" name="TerminV_Service_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFD09F2F-0DE5-C1E6-454F-29792FA17354"/>
+<colUsage columnID="F8E49405-FE90-FDE7-BF41-AC0C9CA107FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0B1CE32A-7EF9-D70C-0214-432BA8460AE5" name="TerminV_Service_TerminV_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<generatorID>1BE79BCF-8AF4-5A01-8884-E7E730496535</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFD09F2F-0DE5-C1E6-454F-29792FA17354"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04ADB5F2-5187-B25A-103A-0EF7C27221D0" name="TerminV_Service_Service_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-02 12:56:59 UTC</createdTime>
+<generatorID>1BE79BCF-8AF4-5A01-8884-E7E730496535</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8E49405-FE90-FDE7-BF41-AC0C9CA107FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
