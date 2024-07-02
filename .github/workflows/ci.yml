@@ -24,14 +24,18 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: .
 
       - name: Run Quarkus application
         run: nohup mvn quarkus:dev &
+        working-directory: .
 
       - name: Wait for Quarkus to start
         run: |
           echo "Waiting for Quarkus to start..."
           sleep 30
+        working-directory: .
 
       - name: Check if Quarkus is running
         run: curl -f http://localhost:8080/q/health
+        working-directory: .
