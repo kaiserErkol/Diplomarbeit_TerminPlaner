@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_28" directorySegmentName="seg_0" id="40BAFCA9-EC03-8B66-6087-C980DACF617D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:15:13 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<targetPk>CA5F37EF-E7DD-91E3-CC43-C927B4CA5C24</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>E23AF3FF-0A4F-B254-BD88-2BEB612A486F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>AE7E0EAF-B9E3-282E-E0D9-C7D27FBFA5CA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

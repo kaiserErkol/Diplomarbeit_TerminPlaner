@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1E0EC3B-AC34-F8BC-D930-E0B61B8BA05F" name="Benachrichtigung">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>406B0256-83CF-C4C5-AF53-BA4BEDA17E1A</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Benachrichtigung_ID" id="D67BC850-A513-FE3E-B0FA-B3087C00D4B2">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>4075F943-9749-022E-C899-8754647F93EF</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nachricht" id="ACDF5B8D-6E6A-B444-9F2B-FF0103895B9D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>7D021EA6-4579-FD56-7DDE-F18C5B169904</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Datum" id="E3860DCE-D908-772A-8205-5F297905F843">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>8479C97A-283D-73FF-AAF9-FE0A6943B653</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kunde_Kunde_ID" id="D63F65C2-84BF-FEC4-A1F2-25460427DD5C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>2FFBFFCB-6019-7A9F-F26E-5337B97CD9AB</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC29EA8E-7456-D87D-F558-531432ED7F4B" referredColumn="5C94E0F8-096B-4E1B-6005-59F1EC6FDDBD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="295D195F-2223-1089-B1D0-228161C5EC24" name="Benachrichtigung_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>8F6D9947-458E-E86C-CCDC-614533F7EF0F</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D67BC850-A513-FE3E-B0FA-B3087C00D4B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1765468-27D9-DD25-B5D7-43D673AD996C" name="Benachrichtigung_Kunde_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>857F1620-4243-066A-4DF2-87CE1DFDD9ED</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D63F65C2-84BF-FEC4-A1F2-25460427DD5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="049AFDA4-A878-8CBE-A13A-23B68B1E82CF" name="Wartungsverlauf">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>C6E754EA-E9A8-50EA-8C0B-C4B03983EC13</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Wartungsverlauf_ID" id="9C957632-6157-8201-1E65-81D847625B65">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>D0D76A1E-F68B-8A01-F755-A8772B0E29DF</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Datum" id="B2C8EF40-65DC-9995-CD10-FE449513D726">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>80C763A2-F760-607F-2AC7-5C2E1B2B3342</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fahrzeug_Fahrzeug_ID" id="D969895E-297E-0225-CB11-0935FF7AAB1E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>D92D6C9B-444F-183F-F250-FB54C16DED53</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0326B37C-D0D0-D09C-3063-E0ABAF7CD862" referredColumn="5054534B-305E-EC0E-D6F1-4FF9F74A492F"/>
+</associations>
+</Column>
+<Column name="Mechaniker_Mechaniker_ID" id="2C1FEE11-A759-E5EA-772F-CE93A3FB8211">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>82873323-A97C-AFC1-E881-288FF97EA849</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4ABCCC4D-9654-918D-AFA0-56845915A726" referredColumn="A24C8579-5A2E-BBF6-0986-0D3159BE0A5B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="021D5A02-57EF-88B8-E0E5-22699A67FE19" name="Wartungsverlauf_Fahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>B6B6AD20-FA2D-4655-6DCA-5B9076D745EC</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D969895E-297E-0225-CB11-0935FF7AAB1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B63974E1-A415-DCE9-FAA5-D3F18262CEC9" name="Wartungsverlauf_Mechaniker_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>2D093801-654E-C459-1D51-8D5CD0AA7DD9</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C1FEE11-A759-E5EA-772F-CE93A3FB8211"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="64A4E213-067D-61EC-87EE-E450AE6A2FD8" name="Service">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>CD6B90BC-2950-761C-2184-3598AC80D3C1</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Service_ID" id="2535EC7D-4F14-841F-0DC6-856941230FF3">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>20C5E63F-E29D-7633-FB20-A1348A6CBB10</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bezeichnung" id="A74D5516-6482-2183-BD50-F5B184D97EEF">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>0090E39C-D24B-8993-1464-75EFE302095C</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Beschreibung" id="B9B1F815-451B-5AE8-118D-2621106300FC">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>1F68DB71-3E91-C969-FAE8-E106A9ED2498</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DauerInStunden" id="CE067A77-D2ED-18C4-6713-7EB2FB7E778E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>7F261AF9-FDB4-6825-C6EE-71F08A0D3235</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fahrzeug_Fahrzeug_ID" id="05FA8C75-286A-BB93-B5CB-0E52706D2C5C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>8ABE1910-DDD0-F176-398A-89BE972A1812</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="99CEAD4C-641B-DFA0-CB83-589432E8984C" referredColumn="5054534B-305E-EC0E-D6F1-4FF9F74A492F"/>
+</associations>
+</Column>
+<Column name="Mechaniker_Mechaniker_ID" id="EC4A0480-AB12-D3EE-4AB3-EC362ECF4E8C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>2986BF62-F537-0CBC-3DF7-E441AD75DEF3</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41E983AE-EBBF-FBF5-4327-CAAF196C33AB" referredColumn="A24C8579-5A2E-BBF6-0986-0D3159BE0A5B"/>
+</associations>
+</Column>
+<Column name="Termin_Termin_ID" id="FAB9C13B-5B97-1114-58B5-367FB323348D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>A34CC15F-3E91-6E96-881A-B780723FB0B5</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78B4A189-6D5E-9CED-FCA5-7D3D2754C715" referredColumn="3EDDF53B-3A92-0AF5-70F6-28EDD75BC39A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D06C2B86-9D0E-EC49-30EC-0BB103D32756" name="Service_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>4EC5B9F5-DF1D-FB4B-07AC-448FCB70B260</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2535EC7D-4F14-841F-0DC6-856941230FF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7904BAC-E991-E41F-C8E1-66097DD5FDD9" name="Service_Fahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>4CC6B056-3254-005F-F9E1-48B1F0492245</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05FA8C75-286A-BB93-B5CB-0E52706D2C5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD28FDC8-632D-5F54-BFA2-3312AFA85E37" name="Service_Mechaniker_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>F131B4C8-B8B4-1FEA-AC1B-D848A12E4CA8</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC4A0480-AB12-D3EE-4AB3-EC362ECF4E8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73192449-A867-03C0-3DD8-0A319DED06A9" name="Service_Termin_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<generatorID>7A0B508C-57DC-F8F6-5AF2-3C7B803B097F</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FAB9C13B-5B97-1114-58B5-367FB323348D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

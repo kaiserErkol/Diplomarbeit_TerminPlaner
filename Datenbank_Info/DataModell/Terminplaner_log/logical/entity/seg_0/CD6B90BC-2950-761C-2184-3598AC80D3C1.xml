@@ -68,30 +68,46 @@
 <logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Kosten" id="9940A988-3F0F-EF31-4BD9-4153B374F58E">
+<Attribute name="Fahrzeug_ID" id="8ABE1910-DDD0-F176-398A-89BE972A1812">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-01 11:09:25 UTC</createdTime>
+<createdTime>2024-07-04 09:54:55 UTC</createdTime>
+<generatorID>4CC6B056-3254-005F-F9E1-48B1F0492245</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <engineerTo>
 <item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3E16192C-6B42-5DE2-F9B8-C46ECB5D7435</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Serviceintervall" id="DABB36F6-BACB-4FA3-E431-08B9B39E6FE1">
+<Attribute name="Mechaniker_ID" id="2986BF62-F537-0CBC-3DF7-E441AD75DEF3">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-01 11:09:36 UTC</createdTime>
+<createdTime>2024-07-04 09:55:02 UTC</createdTime>
+<generatorID>F131B4C8-B8B4-1FEA-AC1B-D848A12E4CA8</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <engineerTo>
 <item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>4EE7C3BD-87A8-FBBB-07A5-2B1792EADD53</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Termin_ID" id="A34CC15F-3E91-6E96-881A-B780723FB0B5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 09:56:02 UTC</createdTime>
+<generatorID>7A0B508C-57DC-F8F6-5AF2-3C7B803B097F</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<referedAttribute>37234804-DC8E-D23A-5D3E-C722D0BC27D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

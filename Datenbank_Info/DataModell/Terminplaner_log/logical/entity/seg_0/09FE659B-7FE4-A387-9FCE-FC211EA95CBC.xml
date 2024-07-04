@@ -81,29 +81,15 @@
 <dataTypeSize>250</dataTypeSize>
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Kunde_ID" id="E94A0E4C-6F54-4FD5-1F93-DDFBAAADAD0F">
+<Attribute name="Kunde_ID" id="5246CB71-2805-3AA8-9CA0-C82D5E5BA9D6">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-01 11:08:07 UTC</createdTime>
-<generatorID>CE1EFB2D-CE98-0AA6-D3C1-412C155E2348</generatorID>
+<createdTime>2024-07-04 09:41:20 UTC</createdTime>
+<generatorID>987F80AE-132B-1A7D-27FC-AE51BAF4B948</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <engineerTo>
 <item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
 </engineerTo>
 <referedAttribute>37CD69FC-2206-2B08-6FC9-C2C90EDEACE1</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Mitarbeiter_ID" id="1D9FB219-F710-AC00-545C-54DA6C34C88C">
-<createdBy>macbook</createdBy>
-<createdTime>2024-07-01 11:47:49 UTC</createdTime>
-<generatorID>5EE40B58-DE68-152A-45BD-99ECA81403C0</generatorID>
-<ownerDesignName>Terminplaner_log</ownerDesignName>
-<engineerTo>
-<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
-</engineerTo>
-<referedAttribute>42D62B6A-CB18-1840-8935-A84599F26A36</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
