@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAE2DC6C-9F12-EE0F-4920-E7EF586380E8" name="Kostenvorschlag">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2E03B542-EA10-2E5B-0567-312F0E10613D" name="Kostenvorschlag">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>B251EEF4-56A7-CC37-C249-C108BF7B7F94</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Kostenvorschlag_ID" id="D7D5F675-F55E-C725-A4C0-F85EBEAF4359">
+<Column name="Kostenvorschlag_ID" id="6CB8E5CF-CA2F-2464-7274-4085A5D8A4F0">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>879C4C00-6D5B-BF3F-89DB-8D1232B7450B</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -19,9 +19,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Kunde_Kunde_ID" id="82D96DE5-8271-86D8-8B5E-EC6763D0BF92">
+<Column name="Kunde_Kunde_ID" id="E632469A-D400-A0D8-213A-6D573C13B934">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>A48B3FA1-A88E-7971-3203-349D8B307C5B</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -31,12 +31,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="B7BA0D1F-3289-0233-A735-06DCB514324F" referredColumn="5C94E0F8-096B-4E1B-6005-59F1EC6FDDBD"/>
+<colAssociation fkAssociation="3F1386DD-8340-7547-BC11-DC3B725AE08E" referredColumn="BA6748CC-3D26-B35D-27C9-C5FA1AFAF70C"/>
 </associations>
 </Column>
-<Column name="Kosten" id="E146CDDA-725E-394C-5D45-2165754FFF5C">
+<Column name="Kosten" id="472DC109-5672-D3ED-A354-9B977E4EADAD">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>2D2B902B-7735-591A-A777-FF453F17A8BD</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -46,9 +46,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Verwalter_Verwalter_ID1" id="B7BC52BC-5140-8A86-7920-F6D57B17B476">
+<Column name="Verwalter_Verwalter_ID" id="BDD59804-6551-9582-EDD8-29F0FF513830">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>74714C5D-BE35-1931-74C4-F84A194C28F8</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -57,43 +58,43 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="9C387DC8-6012-867F-35BB-56521AB957CD" referredColumn="A42B1778-28DD-20FB-CE63-4E0F54C674D5"/>
+<colAssociation fkAssociation="AF89E25C-D1B4-E716-D2BE-BCB924192D8E" referredColumn="12E7C354-89B2-B70E-BDFB-5F457B1BD4DA"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="BA12A0A9-9F39-51AC-325F-313B278B2AD6" name="Kostenvorschlag_PK">
+<ind_PK_UK id="BCBCEC71-443F-E1FC-B01D-E34A25B82304" name="Kostenvorschlag_PK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>BBAE8ACE-C305-486E-1E79-5A5AA730C167</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="D7D5F675-F55E-C725-A4C0-F85EBEAF4359"/>
+<colUsage columnID="6CB8E5CF-CA2F-2464-7274-4085A5D8A4F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DAC1F5BE-5778-148C-A63D-6554A6AA12AC" name="Kostenvorschlag_Verwalter_FK">
+<ind_PK_UK id="75B5C12B-679A-ECEA-90BC-925065BB48EC" name="Kostenvorschlag_Verwalter_FK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>3368388C-9D31-26ED-19FE-66C038C258F0</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="B7BC52BC-5140-8A86-7920-F6D57B17B476"/>
+<colUsage columnID="BDD59804-6551-9582-EDD8-29F0FF513830"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="0BEF5CDB-7071-2FE5-AD37-1B009CB8E005" name="Kostenvorschlag_Kunde_FK">
+<ind_PK_UK id="F3A5F0FB-0852-1324-41FE-22CC8DBA9801" name="Kostenvorschlag_Kunde_FK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>C9FCEBE3-55FE-8F2B-9E49-FE6AF8736B5D</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="82D96DE5-8271-86D8-8B5E-EC6763D0BF92"/>
+<colUsage columnID="E632469A-D400-A0D8-213A-6D573C13B934"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

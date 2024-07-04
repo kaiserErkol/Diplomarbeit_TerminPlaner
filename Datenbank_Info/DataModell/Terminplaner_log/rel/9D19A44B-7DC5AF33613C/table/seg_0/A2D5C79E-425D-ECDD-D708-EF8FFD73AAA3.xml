@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C90E76C8-5360-B113-8BEB-9C8270D4F7CD" name="Mechaniker">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2D5C79E-425D-ECDD-D708-EF8FFD73AAA3" name="Mechaniker">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>BF71B6C8-16F6-D24F-D582-F34BC0543AC8</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Mechaniker_ID" id="A24C8579-5A2E-BBF6-0986-0D3159BE0A5B">
+<Column name="Mechaniker_ID" id="7AFAB704-58F9-2780-2B33-463BA4899B85">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>4EE7C3BD-87A8-FBBB-07A5-2B1792EADD53</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -19,9 +19,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Vorname" id="A206DE50-9DEA-E755-2CD6-F0E19CA9CD82">
+<Column name="Vorname" id="CBF5A8D3-6C56-668B-72C6-1B92C47D7202">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>D011D51A-C8CE-51F1-A6AA-9ABEA78E9966</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -32,9 +32,9 @@
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Nachname" id="5D7D8BB3-CFA9-2443-F6EC-FAF8334FE8AF">
+<Column name="Nachname" id="F5E6BB15-B504-D842-03DA-C51727127987">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>0B0164FF-9E2A-29DD-8682-B18078C5AF72</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -45,9 +45,9 @@
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="NamenKuerzel" id="AA54A2DD-CC3F-E9AE-9D66-BCBD51B3FF02">
+<Column name="NamenKuerzel" id="0461FAC4-B974-047A-97DA-E5FFED8C2961">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>7A70F054-3181-6228-0E32-DD83A6D4EAD2</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -58,9 +58,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Telefon" id="76202765-6668-FBF7-CD65-60DBE309BC71">
+<Column name="Telefon" id="420877BA-BB55-536A-C881-BEAE47B90E22">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>DD40F4B5-AE18-0844-1043-6979A8D8C840</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -73,16 +73,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="D2703633-E72E-B1D9-C60D-674EF9F6B9E1" name="Mechaniker_PK">
+<ind_PK_UK id="C91A13BE-9547-C9CE-5F85-2C0F1658A67B" name="Mechaniker_PK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>90B52CFB-8A4B-41AF-E9E2-5E99B164D36A</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A24C8579-5A2E-BBF6-0986-0D3159BE0A5B"/>
+<colUsage columnID="7AFAB704-58F9-2780-2B33-463BA4899B85"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

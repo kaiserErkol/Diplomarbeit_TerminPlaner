@@ -22,11 +22,25 @@
 <engineerTo>
 <item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D7E1CBC5-9573-B148-2123-1EA7FF47AE8E" name="Key_1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:52:27 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>AA4C0452-5071-4E2F-9BB3-5FC230C6F937</newElementsIDs>
+<usedAttributes>
+<attributeRef>AA4C0452-5071-4E2F-9BB3-5FC230C6F937</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

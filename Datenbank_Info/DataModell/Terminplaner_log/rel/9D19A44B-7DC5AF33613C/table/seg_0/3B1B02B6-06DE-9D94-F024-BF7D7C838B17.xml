@@ -1,28 +1,27 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D39DD42F-DFF3-7C50-0B91-53BE8D10C774" name="Terminvorschlag">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3B1B02B6-06DE-9D94-F024-BF7D7C838B17" name="Terminvorschlag">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>E23AF3FF-0A4F-B254-BD88-2BEB612A486F</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Terminvorschlag_ID" id="78AB017C-BE9A-A3FC-7B67-BA317526799E">
+<Column name="Terminvorschlag_ID" id="E9B8A336-A269-F894-FD96-DA44F88C75BB">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>8F9FB85F-DCFE-90CF-901D-BB03381C20FF</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Kunde_Kunde_ID" id="525B5A2E-EC0D-1630-34C9-D13A6FB8D16B">
+<Column name="Kunde_Kunde_ID" id="F7D8F4ED-2A62-6369-8187-557CC8D2885B">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>DB7FC381-17D7-F3F1-F9F3-B3DA5A41D18C</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -33,12 +32,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="9A390E60-3C79-FAC6-B7E4-96617144FA9F" referredColumn="5C94E0F8-096B-4E1B-6005-59F1EC6FDDBD"/>
+<colAssociation fkAssociation="1FD28F59-0701-FA80-353D-1099E3D86E1D" referredColumn="BA6748CC-3D26-B35D-27C9-C5FA1AFAF70C"/>
 </associations>
 </Column>
-<Column name="Verwalter_Verwalter_ID1" id="1D0C10FE-AC73-D4A0-5622-AD0130BE2804">
+<Column name="Verwalter_Verwalter_ID" id="91C91456-51FF-D837-5D3F-8E6F45DB9638">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>B2CE39FC-8A28-3609-48D5-6B2446C72402</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -47,31 +47,43 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="3327A0CF-9BEB-D028-3226-6FC7ED5EB4A4" referredColumn="A42B1778-28DD-20FB-CE63-4E0F54C674D5"/>
+<colAssociation fkAssociation="3DC22CBB-EBC8-4C62-B4F4-A226B84284C2" referredColumn="12E7C354-89B2-B70E-BDFB-5F457B1BD4DA"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="B607096F-D881-173B-E3D2-A970F0B5363D" name="Terminvorschlag_Verwalter_FK">
+<ind_PK_UK id="CA341A0F-90B1-FC5B-4521-893AAC5A20F9" name="Terminvorschlag_PK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>98D5724F-8F70-8449-E11D-BAF9964C768F</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9B8A336-A269-F894-FD96-DA44F88C75BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93E86D24-8EBA-6AA0-D08B-B378FFD3F0A3" name="Terminvorschlag_Verwalter_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>5041ECD3-003C-2D2E-A917-F62A3B52A804</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1D0C10FE-AC73-D4A0-5622-AD0130BE2804"/>
+<colUsage columnID="91C91456-51FF-D837-5D3F-8E6F45DB9638"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F4C8772C-C210-28D4-A0CE-A1BBC9F78268" name="Terminvorschlag_Kunde_FK">
+<ind_PK_UK id="DA42D873-F7EF-D8FE-E621-F60D98312CF0" name="Terminvorschlag_Kunde_FK">
 <createdBy>macbook</createdBy>
-<createdTime>2024-07-04 10:32:28 UTC</createdTime>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
 <generatorID>40BAFCA9-EC03-8B66-6087-C980DACF617D</generatorID>
 <ownerDesignName>Terminplaner_log</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="525B5A2E-EC0D-1630-34C9-D13A6FB8D16B"/>
+<colUsage columnID="F7D8F4ED-2A62-6369-8187-557CC8D2885B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

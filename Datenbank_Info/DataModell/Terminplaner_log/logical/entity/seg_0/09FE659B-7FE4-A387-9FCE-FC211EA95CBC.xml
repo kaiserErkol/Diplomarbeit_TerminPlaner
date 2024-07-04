@@ -95,6 +95,20 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Verwalter_ID" id="E119453E-5BB7-5D88-1828-1931A84D8893">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:52:41 UTC</createdTime>
+<generatorID>434280A7-8A3B-7A0C-B103-59196ACD5EC3</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<referedAttribute>AA4C0452-5071-4E2F-9BB3-5FC230C6F937</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6586A2FE-7746-51D7-805B-B5135F724067" name="Key_1">

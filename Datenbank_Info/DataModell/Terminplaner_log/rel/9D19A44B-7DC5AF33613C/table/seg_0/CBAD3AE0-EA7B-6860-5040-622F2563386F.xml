@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBAD3AE0-EA7B-6860-5040-622F2563386F" name="Verwalter">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>EE7FAB6D-57BA-CFB7-A848-F96ABD01C47B</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Verwalter_ID" id="12E7C354-89B2-B70E-BDFB-5F457B1BD4DA">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>AA4C0452-5071-4E2F-9BB3-5FC230C6F937</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5E854A8C-D30D-25B6-9548-FD729AA39EF4" name="Verwalter_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 11:34:32 UTC</createdTime>
+<generatorID>D7E1CBC5-9573-B148-2123-1EA7FF47AE8E</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12E7C354-89B2-B70E-BDFB-5F457B1BD4DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

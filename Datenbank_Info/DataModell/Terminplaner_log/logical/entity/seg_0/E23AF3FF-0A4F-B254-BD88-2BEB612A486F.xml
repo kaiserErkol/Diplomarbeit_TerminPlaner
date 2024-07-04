@@ -22,7 +22,6 @@
 <engineerTo>
 <item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -43,5 +42,34 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Verwalter_ID" id="B2CE39FC-8A28-3609-48D5-6B2446C72402">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:52:41 UTC</createdTime>
+<generatorID>5041ECD3-003C-2D2E-A917-F62A3B52A804</generatorID>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<referedAttribute>AA4C0452-5071-4E2F-9BB3-5FC230C6F937</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="98D5724F-8F70-8449-E11D-BAF9964C768F" name="Key_1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-04 10:52:48 UTC</createdTime>
+<ownerDesignName>Terminplaner_log</ownerDesignName>
+<engineerTo>
+<item key="9D19A44B-4A44-D75E-17DC-7DC5AF33613C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>8F9FB85F-DCFE-90CF-901D-BB03381C20FF</newElementsIDs>
+<usedAttributes>
+<attributeRef>8F9FB85F-DCFE-90CF-901D-BB03381C20FF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
