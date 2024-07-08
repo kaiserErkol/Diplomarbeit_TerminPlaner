@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS kunde;
+
+/*
 DROP TABLE IF EXISTS wartungsverlauf;
 DROP TABLE IF EXISTS benachrichtigung;
 DROP TABLE IF EXISTS fahrzeug;
@@ -9,3 +12,4 @@ DROP TABLE IF EXISTS mechaniker;
 DROP TABLE IF EXISTS terminvorschlag;
 DROP TABLE IF EXISTS verleihauto;
 DROP TABLE IF EXISTS verwalter;
+ */

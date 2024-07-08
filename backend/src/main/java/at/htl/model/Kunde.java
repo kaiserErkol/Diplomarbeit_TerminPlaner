@@ -1,121 +1,83 @@
 package at.htl.model;
-
 import jakarta.persistence.*;
-
-import java.util.List;
 import java.util.Objects;
 
 @Entity
 public class Kunde {
 
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int kunde_id;
 
-    @Column
-    private String Vorname;
+    private String vorname;
 
-    @Column
-    private String Nachname;
+    private String nachname;
 
-    @Column
-    private String Email;
+    private String email;
 
-    @Column
-    private String Telefonnummer;
+    private String telefonnummer;
 
-    @Column
-    private String Adresse;
+    private String adresse;
 
-    @OneToMany(mappedBy = "kunde", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Fahrzeug> fahrzeuge;
-
-    @OneToMany(mappedBy = "kunde", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Termin> termine;
-
-    @OneToMany(mappedBy = "kunde", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Benachrichtigung> benachrichtigungen;
-
+    // Constructors
     public Kunde(String vorname, String nachname, String email, String telefonnummer, String adresse) {
-        Vorname = vorname;
-        Nachname = nachname;
-        Email = email;
-        Telefonnummer = telefonnummer;
-        Adresse = adresse;
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.email = email;
+        this.telefonnummer = telefonnummer;
+        this.adresse = adresse;
     }
 
-    public Kunde() {}
-
-    public long getId() {
-        return id;
+    public Kunde() {
     }
 
-    public void setId(long id) {
-        this.id = id;
+    // Getters and Setters
+    public int getKunde_id() {
+        return kunde_id;
+    }
+
+    public void setKunde_id(int kunde_id) {
+        this.kunde_id = kunde_id;
     }
 
     public String getVorname() {
-        return Vorname;
+        return vorname;
     }
 
     public void setVorname(String vorname) {
-        Vorname = vorname;
+        this.vorname = vorname;
     }
 
     public String getNachname() {
-        return Nachname;
+        return nachname;
     }
 
     public void setNachname(String nachname) {
-        Nachname = nachname;
+        this.nachname = nachname;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getTelefonnummer() {
-        return Telefonnummer;
+        return telefonnummer;
     }
 
     public void setTelefonnummer(String telefonnummer) {
-        Telefonnummer = telefonnummer;
+        this.telefonnummer = telefonnummer;
     }
 
     public String getAdresse() {
-        return Adresse;
+        return adresse;
     }
 
     public void setAdresse(String adresse) {
-        Adresse = adresse;
-    }
-
-    public List<Fahrzeug> getFahrzeuge() {
-        return fahrzeuge;
-    }
-
-    public void setFahrzeuge(List<Fahrzeug> fahrzeuge) {
-        this.fahrzeuge = fahrzeuge;
-    }
-
-    public List<Termin> getTermine() {
-        return termine;
-    }
-
-    public void setTermine(List<Termin> termine) {
-        this.termine = termine;
-    }
-
-    public List<Benachrichtigung> getBenachrichtigungen() {
-        return benachrichtigungen;
-    }
-
-    public void setBenachrichtigungen(List<Benachrichtigung> benachrichtigungen) {
-        this.benachrichtigungen = benachrichtigungen;
+        this.adresse = adresse;
     }
 
     @Override
@@ -123,11 +85,16 @@ public class Kunde {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Kunde kunde = (Kunde) o;
-        return id == kunde.id && Objects.equals(Vorname, kunde.Vorname) && Objects.equals(Nachname, kunde.Nachname) && Objects.equals(Email, kunde.Email) && Objects.equals(Telefonnummer, kunde.Telefonnummer) && Objects.equals(Adresse, kunde.Adresse);
+        return kunde_id == kunde.kunde_id &&
+                Objects.equals(vorname, kunde.vorname) &&
+                Objects.equals(nachname, kunde.nachname) &&
+                Objects.equals(email, kunde.email) &&
+                Objects.equals(telefonnummer, kunde.telefonnummer) &&
+                Objects.equals(adresse, kunde.adresse);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, Vorname, Nachname, Email, Telefonnummer, Adresse);
+        return Objects.hash(kunde_id, vorname, nachname, email, telefonnummer, adresse);
     }
 }
