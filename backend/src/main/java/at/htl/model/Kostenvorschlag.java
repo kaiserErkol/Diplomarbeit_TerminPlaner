@@ -28,11 +28,10 @@ public class Kostenvorschlag {
     public Kostenvorschlag() {
     }
 
-    public Kostenvorschlag(int kostenvorschlag_id, double kosten, Kunde kunde, Verwalter verwalter) {
+    public Kostenvorschlag(int kostenvorschlag_id, double kosten, Kunde kunde) {
         this.kostenvorschlag_id = kostenvorschlag_id;
         this.kosten = kosten;
         this.kunde = kunde;
-        this.verwalter = verwalter;
     }
 
     public int getKostenvorschlag_id() {

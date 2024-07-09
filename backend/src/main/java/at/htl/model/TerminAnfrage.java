@@ -41,13 +41,12 @@ public class TerminAnfrage {
 
     }
 
-    public TerminAnfrage(int terminanfrage_id, Date datum, String notiz, Kunde kunde, Fahrzeug fahrzeug, Verwalter verwalter, Service service) {
+    public TerminAnfrage(int terminanfrage_id, Date datum, String notiz, Kunde kunde, Fahrzeug fahrzeug, Service service) {
         this.terminanfrage_id = terminanfrage_id;
         this.datum = datum;
         this.notiz = notiz;
         this.kunde = kunde;
         this.fahrzeug = fahrzeug;
-        this.verwalter = verwalter;
         this.service = service;
     }
 

@@ -2,6 +2,8 @@ package at.htl.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+
+import java.sql.Time;
 import java.util.Date;
 
 @Entity
@@ -30,8 +32,7 @@ public class TerminVorschlag {
     public TerminVorschlag() {
     }
 
-    public TerminVorschlag(int terminvorschlag_id, Date datum, Date uhrzeit, Kunde kunde, Verwalter verwalter) {
-        this.terminvorschlag_id = terminvorschlag_id;
+    public TerminVorschlag(Date datum, Time uhrzeit, Kunde kunde, Verwalter verwalter) {
         this.datum = datum;
         this.uhrzeit = uhrzeit;
         this.kunde = kunde;

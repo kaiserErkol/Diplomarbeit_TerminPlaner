@@ -1,5 +1,6 @@
 package at.htl.model;
 
+import at.htl.enums.TerminStatus;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -16,7 +17,7 @@ public class Termin {
 
     private Date datum;
     private Date uhrzeit;
-    private String status;
+    private TerminStatus status;
     private String notizen;
 
     @ManyToOne
@@ -43,7 +44,7 @@ public class Termin {
     public Termin() {
     }
 
-    public Termin(int termin_id, Date datum, Date uhrzeit, String status, String notizen, Service service, Kunde kunde, Verwalter verwalter) {
+    public Termin(int termin_id, Date datum, Date uhrzeit, TerminStatus status, String notizen, Service service, Kunde kunde) {
         this.termin_id = termin_id;
         this.datum = datum;
         this.uhrzeit = uhrzeit;
@@ -51,7 +52,6 @@ public class Termin {
         this.notizen = notizen;
         this.service = service;
         this.kunde = kunde;
-        this.verwalter = verwalter;
     }
 
     public int getTermin_id() {
@@ -78,11 +78,11 @@ public class Termin {
         this.uhrzeit = uhrzeit;
     }
 
-    public String getStatus() {
+    public TerminStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TerminStatus status) {
         this.status = status;
     }
 

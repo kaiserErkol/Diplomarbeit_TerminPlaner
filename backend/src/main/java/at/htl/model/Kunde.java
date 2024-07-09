@@ -41,7 +41,7 @@ public class Kunde {
 
     @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<Verleihauto> verleihautos;
+    private List<Verleih> verleihList;
 
     @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
@@ -149,12 +149,12 @@ public class Kunde {
         this.terminvorschlaege = terminvorschlaege;
     }
 
-    public List<Verleihauto> getVerleihautos() {
-        return verleihautos;
+    public List<Verleih> getVerleihList() {
+        return verleihList;
     }
 
-    public void setVerleihautos(List<Verleihauto> verleihautos) {
-        this.verleihautos = verleihautos;
+    public void setVerleihList(List<Verleih> verleihList) {
+        this.verleihList = verleihList;
     }
 
     public List<TerminAnfrage> getTerminanfragen() {

@@ -15,28 +15,16 @@ public class Verleihauto {
     private String modell;
     private char besetzt;
 
-    @ManyToOne
-    @JoinColumn(name = "verwalter_verwalter_id", nullable = false)
-    @JsonBackReference
-    private Verwalter verwalter;
-
-    @ManyToOne
-    @JoinColumn(name = "kunde_kunde_id")
-    @JsonBackReference
-    private Kunde kunde;
-
     // Getters and Setters
 
     public Verleihauto() {
     }
 
-    public Verleihauto(int verleihauto_id, String marke, String modell, char besetzt, Verwalter verwalter, Kunde kunde) {
+    public Verleihauto(int verleihauto_id, String marke, String modell, char besetzt) {
         this.verleihauto_id = verleihauto_id;
         this.marke = marke;
         this.modell = modell;
         this.besetzt = besetzt;
-        this.verwalter = verwalter;
-        this.kunde = kunde;
     }
 
     public int getVerleihauto_id() {
@@ -69,21 +57,5 @@ public class Verleihauto {
 
     public void setBesetzt(char besetzt) {
         this.besetzt = besetzt;
-    }
-
-    public Verwalter getVerwalter() {
-        return verwalter;
-    }
-
-    public void setVerwalter(Verwalter verwalter) {
-        this.verwalter = verwalter;
-    }
-
-    public Kunde getKunde() {
-        return kunde;
-    }
-
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
     }
 }
