@@ -58,3 +58,8 @@ VALUES (NEXT VALUE FOR verwalter_id_seq, 'Audi', 'A4', 'N', 1, NULL);
 -- Inserts für die Tabelle wartungsverlauf
 INSERT INTO wartungsverlauf (wartungsverlauf_id, datum, fahrzeug_fahrzeug_id, service_service_id, mechaniker_mechaniker_id, notiz, status)
 VALUES (NEXT VALUE FOR wartungsverlauf_id_seq, '2024-07-11', 'AM 123AB', 1, 1, 'Ölwechsel durchgeführt', 'ABHOLBEREIT');
+
+-- Insert for the new table Terminanfrage
+INSERT INTO terminanfrage (terminanfrage_id, datum, notiz, kunde_kunde_id, fahrzeug_fahrzeug_id, service_service_id, verwalter_verwalter_id)
+VALUES (NEXT VALUE FOR terminanfrage_id_seq, '2024-07-15', 'keine Notizen', 1, 'AM 123AB', 1, 1);
+

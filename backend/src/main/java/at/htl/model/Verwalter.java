@@ -30,6 +30,10 @@ public class Verwalter {
     @JsonManagedReference
     private List<Verleihauto> verleihautos;
 
+    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<TerminAnfrage> terminanfragen;
+
     // Getters and Setters
 
 
@@ -82,5 +86,13 @@ public class Verwalter {
 
     public void setVerleihautos(List<Verleihauto> verleihautos) {
         this.verleihautos = verleihautos;
+    }
+
+    public List<TerminAnfrage> getTerminanfragen() {
+        return terminanfragen;
+    }
+
+    public void setTerminanfragen(List<TerminAnfrage> terminanfragen) {
+        this.terminanfragen = terminanfragen;
     }
 }

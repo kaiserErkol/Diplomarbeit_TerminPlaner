@@ -16,13 +16,17 @@ public class Service {
     private String beschreibung;
     private int dauerinmin;
 
-    @OneToMany(mappedBy = "service")
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Termin> termine;
 
     @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Wartungsverlauf> wartungsverlaeufe;
+
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<TerminAnfrage> terminanfragen;
 
     // Getters and Setters
 
@@ -82,5 +86,13 @@ public class Service {
 
     public void setWartungsverlaeufe(List<Wartungsverlauf> wartungsverlaeufe) {
         this.wartungsverlaeufe = wartungsverlaeufe;
+    }
+
+    public List<TerminAnfrage> getTerminanfragen() {
+        return terminanfragen;
+    }
+
+    public void setTerminanfragen(List<TerminAnfrage> terminanfragen) {
+        this.terminanfragen = terminanfragen;
     }
 }
