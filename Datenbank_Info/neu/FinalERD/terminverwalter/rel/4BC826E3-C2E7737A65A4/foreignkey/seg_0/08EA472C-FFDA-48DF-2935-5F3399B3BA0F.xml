@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="08EA472C-FFDA-48DF-2935-5F3399B3BA0F" containerWithKeyObject="7CC71D2D-7702-92D8-05BC-38DB8FC4D73E" localFKIndex="12628426-8E3C-ED63-BE99-B55802AD5C19" name="Terminvorschlag_Kostenvorschlag_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>878242B9-130A-E010-9C94-354C681976C0</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<referredTableLongName>Kostenvorschlag</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E99CC1D0-ED21-7305-E442-8B1AED9A705C</referredTableID>
+<keyObject>EDB453BA-8EFF-15F8-30AD-650C251DD140</keyObject>
+<referredKeyID>EDB453BA-8EFF-15F8-30AD-650C251DD140</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>kostenvrs_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

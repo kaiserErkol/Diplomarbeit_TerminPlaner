@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="16211C6D-6C2C-2A3E-84F7-5F7BAAA68167" name="Feedback">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>804D1722-BE43-7277-A6A0-1B61EAA991DC</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="feedback_ID" id="78C72A6A-C881-330E-1D66-756AF327E51B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>99D75C70-2F67-877B-E1A9-8FB0B8BD8AED</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bewertung" id="4F74951B-9660-68C3-9208-C341E415558C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>E6F2D830-6770-40DE-0B41-98E983631FF8</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kommentar" id="ED254052-14B6-D75E-A900-65B5AC1AC1B1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>D425361C-18F8-160E-112E-50AA829A5695</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reparatur_reparatur_ID" id="595A3045-F5B8-9A6B-B641-EE5B03C4AE33">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>41C58A1E-C702-5D5C-0BFC-CFE79753AA62</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA96389D-58A9-F25B-F997-B835CAB96B8E" referredColumn="3576E7B8-C64E-41E5-7E92-BB4C95B11558"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A7DDE15-90C3-901A-BDEF-E0FA9A0F522B" name="Feedback_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>E1FDF5B3-6599-1AE1-F123-D3B2A10ED10D</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78C72A6A-C881-330E-1D66-756AF327E51B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CEF49E7-C460-3A1A-1C6B-07891CDC6010" name="Feedback_Reparatur_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>4F0B83E6-95FA-B1D6-2AB2-A9EAD73D7DA1</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="595A3045-F5B8-9A6B-B641-EE5B03C4AE33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

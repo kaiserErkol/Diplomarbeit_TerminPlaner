@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF5D7856-ECBE-6DE5-659E-637444B3D3F0" name="Termin">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>65F5D164-87CC-7047-C2A0-2E9D05B01AF6</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="termin_ID" id="0C157DD8-045B-692D-7C1D-623C0E016766">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>7B3E53FF-9453-F23C-6037-2060496C3749</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="datum" id="A6036FF3-FBA3-5971-DA54-A6D37ADCD182">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>CFCC30B3-949E-4FB2-D1E7-F9B6A2DF2E4F</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="uhrzeit" id="6AE32540-1EEC-87FA-A64A-F1DFEBEE962B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>38B5EF22-DAE9-C768-5599-27D58BAF51ED</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reparatur_reparatur_ID" id="AA1E1835-1960-2A2E-1DC7-E1C3981A1C3C">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>CF4CA2FC-52F1-F747-EC6F-DBE6A959B32B</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E5E48A5-1E82-7A60-B151-5EEC4ECA8E01" referredColumn="3576E7B8-C64E-41E5-7E92-BB4C95B11558"/>
+</associations>
+</Column>
+<Column name="Verwalter_mitarbeiter_ID" id="D1D4BF0D-E598-FA7C-27DD-4A406DF3F757">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>01CFD10A-7DAA-AA76-14CE-F2A000636777</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09B9C4F9-FA7C-DC9B-351E-E8424DDD9AAF" referredColumn="24CDF980-82A0-1E3D-C29C-F8A79E370C60"/>
+</associations>
+</Column>
+<Column name="Terminvorschlag_terminvrs_ID" id="1419461A-3CDE-EAE0-A7EE-DD357B4634B3">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DC518AA3-2C08-243B-EB8B-44D18CAB3A0B</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF53E18D-D2B4-E100-DCAB-BBCEA3BB0E27" referredColumn="D09193A8-990B-93E5-EE9C-0B96F7D0165B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFD2976F-4405-B2D1-617F-02691EBFCF8C" name="Termin_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>EFDBDEFC-4B82-C8E3-E060-582DEEE7E2CF</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C157DD8-045B-692D-7C1D-623C0E016766"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7EFF9CE-0BAD-6950-83A5-4A78DE3ED3A5" name="Termin__IDX">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>7F26F105-A500-2991-1A9E-9EB904E7E6DB</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="1419461A-3CDE-EAE0-A7EE-DD357B4634B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ADC86EF6-7040-0E68-80DA-4E34F561A161" name="Termin__IDXv1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>ED1CE7F2-B8AE-C605-29EA-44845C3244BF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="AA1E1835-1960-2A2E-1DC7-E1C3981A1C3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E41D8ABC-A9C5-4B6E-89F6-2E359BE7F78E" name="Termin_Verwalter_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>34DDFE40-40A3-5039-017B-E0E03E6E98D3</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1D4BF0D-E598-FA7C-27DD-4A406DF3F757"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3D7D3CB-6AD8-9D0B-8869-3BFE75E02532" name="Termin_Terminvorschlag_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>7F26F105-A500-2991-1A9E-9EB904E7E6DB</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1419461A-3CDE-EAE0-A7EE-DD357B4634B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F95AE60-38AC-19AC-C380-A3D620C77ABF" name="Termin_Reparatur_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>ED1CE7F2-B8AE-C605-29EA-44845C3244BF</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA1E1835-1960-2A2E-1DC7-E1C3981A1C3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

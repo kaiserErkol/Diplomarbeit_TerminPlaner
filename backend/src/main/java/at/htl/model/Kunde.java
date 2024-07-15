@@ -1,15 +1,14 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Kunde {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "kundeSeq")
-    @SequenceGenerator(name = "kundeSeq", sequenceName = "kunde_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int kunde_id;
 
     private String vorname;
@@ -18,42 +17,10 @@ public class Kunde {
     private String telefonnummer;
     private String adresse;
 
+    @OneToMany(mappedBy = "kunde", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Reparatur> reparaturList;
 
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Benachrichtigung> benachrichtigungen;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Fahrzeug> fahrzeuge;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Termin> termine;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Kostenvorschlag> kostenvorschlaege;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<TerminVorschlag> terminvorschlaege;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Verleih> verleihList;
-
-    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<TerminAnfrage> terminanfragen;
-
-    // Getters and Setters
-
-    public Kunde() {
-    }
-
-    public Kunde(int kunde_id, String vorname, String nachname, String email, String telefonnummer, String adresse) {
-        this.kunde_id = kunde_id;
+    public Kunde(String vorname, String nachname, String email, String telefonnummer, String adresse) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.email = email;
@@ -61,12 +28,14 @@ public class Kunde {
         this.adresse = adresse;
     }
 
-    public int getKunde_id() {
+    public Kunde() {}
+
+    public int getKundeId() {
         return kunde_id;
     }
 
-    public void setKunde_id(int kunde_id) {
-        this.kunde_id = kunde_id;
+    public void setKundeId(int kundeId) {
+        this.kunde_id = kundeId;
     }
 
     public String getVorname() {
@@ -109,59 +78,24 @@ public class Kunde {
         this.adresse = adresse;
     }
 
-    public List<Benachrichtigung> getBenachrichtigungen() {
-        return benachrichtigungen;
+    public List<Reparatur> getReparaturList() {
+        return reparaturList;
     }
 
-    public void setBenachrichtigungen(List<Benachrichtigung> benachrichtigungen) {
-        this.benachrichtigungen = benachrichtigungen;
+    public void setReparaturList(List<Reparatur> reparaturList) {
+        this.reparaturList = reparaturList;
     }
 
-    public List<Fahrzeug> getFahrzeuge() {
-        return fahrzeuge;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Kunde kunde = (Kunde) o;
+        return kunde_id == kunde.kunde_id && Objects.equals(vorname, kunde.vorname) && Objects.equals(nachname, kunde.nachname) && Objects.equals(email, kunde.email) && Objects.equals(telefonnummer, kunde.telefonnummer) && Objects.equals(adresse, kunde.adresse);
     }
 
-    public void setFahrzeuge(List<Fahrzeug> fahrzeuge) {
-        this.fahrzeuge = fahrzeuge;
-    }
-
-    public List<Termin> getTermine() {
-        return termine;
-    }
-
-    public void setTermine(List<Termin> termine) {
-        this.termine = termine;
-    }
-
-    public List<Kostenvorschlag> getKostenvorschlaege() {
-        return kostenvorschlaege;
-    }
-
-    public void setKostenvorschlaege(List<Kostenvorschlag> kostenvorschlaege) {
-        this.kostenvorschlaege = kostenvorschlaege;
-    }
-
-    public List<TerminVorschlag> getTerminvorschlaege() {
-        return terminvorschlaege;
-    }
-
-    public void setTerminvorschlaege(List<TerminVorschlag> terminvorschlaege) {
-        this.terminvorschlaege = terminvorschlaege;
-    }
-
-    public List<Verleih> getVerleihList() {
-        return verleihList;
-    }
-
-    public void setVerleihList(List<Verleih> verleihList) {
-        this.verleihList = verleihList;
-    }
-
-    public List<TerminAnfrage> getTerminanfragen() {
-        return terminanfragen;
-    }
-
-    public void setTerminanfragen(List<TerminAnfrage> terminanfragen) {
-        this.terminanfragen = terminanfragen;
+    @Override
+    public int hashCode() {
+        return Objects.hash(kunde_id, vorname, nachname, email, telefonnummer, adresse);
     }
 }

@@ -1,52 +1,49 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
-import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class Mechaniker {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "mechanikerSeq")
-    @SequenceGenerator(name = "mechanikerSeq", sequenceName = "mechaniker_id_seq", allocationSize = 1)
-    private int mechaniker_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int mechanikerId;
 
+    private String namekrzl;
     private String vorname;
     private String nachname;
-    private String namenkuerzel;
-    private String telefon;
+    private String telefonnummer;
+    private String email;
+    private String adresse;
 
-    @ManyToOne
-    @JoinColumn(name = "termin_termin_id", nullable = false)
-    @JsonBackReference
-    private Termin termin;
-
-    @OneToMany(mappedBy = "mechaniker", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Wartungsverlauf> wartungsverlaeufe;
-
-    // Getters and Setters
-
-    public Mechaniker() {
-    }
-
-    public Mechaniker(int mechaniker_id, String vorname, String nachname, String namenkuerzel, String telefon, Termin termin) {
-        this.mechaniker_id = mechaniker_id;
+    public Mechaniker(String namekrzl, String vorname, String nachname, String telefonnummer, String email, String adresse) {
+        this.namekrzl = namekrzl;
         this.vorname = vorname;
         this.nachname = nachname;
-        this.namenkuerzel = namenkuerzel;
-        this.telefon = telefon;
-        this.termin = termin;
+        this.telefonnummer = telefonnummer;
+        this.email = email;
+        this.adresse = adresse;
     }
 
-    public int getMechaniker_id() {
-        return mechaniker_id;
+    public Mechaniker() {}
+
+    public int getMechanikerId() {
+        return mechanikerId;
     }
 
-    public void setMechaniker_id(int mechaniker_id) {
-        this.mechaniker_id = mechaniker_id;
+    public void setMechanikerId(int mechanikerId) {
+        this.mechanikerId = mechanikerId;
+    }
+
+    public String getNamekrzl() {
+        return namekrzl;
+    }
+
+    public void setNamekrzl(String namekrzl) {
+        this.namekrzl = namekrzl;
     }
 
     public String getVorname() {
@@ -65,35 +62,40 @@ public class Mechaniker {
         this.nachname = nachname;
     }
 
-    public String getNamenkuerzel() {
-        return namenkuerzel;
+    public String getTelefonnummer() {
+        return telefonnummer;
     }
 
-    public void setNamenkuerzel(String namenkuerzel) {
-        this.namenkuerzel = namenkuerzel;
+    public void setTelefonnummer(String telefonnummer) {
+        this.telefonnummer = telefonnummer;
     }
 
-    public String getTelefon() {
-        return telefon;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Termin getTermin() {
-        return termin;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setTermin(Termin termin) {
-        this.termin = termin;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
-    public List<Wartungsverlauf> getWartungsverlaeufe() {
-        return wartungsverlaeufe;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mechaniker that = (Mechaniker) o;
+        return mechanikerId == that.mechanikerId && Objects.equals(namekrzl, that.namekrzl) && Objects.equals(vorname, that.vorname) && Objects.equals(nachname, that.nachname) && Objects.equals(telefonnummer, that.telefonnummer) && Objects.equals(email, that.email) && Objects.equals(adresse, that.adresse);
     }
 
-    public void setWartungsverlaeufe(List<Wartungsverlauf> wartungsverlaeufe) {
-        this.wartungsverlaeufe = wartungsverlaeufe;
+    @Override
+    public int hashCode() {
+        return Objects.hash(mechanikerId, namekrzl, vorname, nachname, telefonnummer, email, adresse);
     }
 }

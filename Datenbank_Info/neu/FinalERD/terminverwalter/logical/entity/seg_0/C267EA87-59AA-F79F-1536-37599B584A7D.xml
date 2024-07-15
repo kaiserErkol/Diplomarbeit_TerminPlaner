@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C267EA87-59AA-F79F-1536-37599B584A7D" name="Fahrzeug">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:08 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="fahrzeug_ID" id="4359E087-6FAF-AF9A-ADB4-964978EC3DAF">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kennzeichen" id="2402928C-4023-7C96-B632-70051AC07B97">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:24 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="marke" id="C2649A7B-C65F-7070-F534-9F3B05934D51">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:36 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="modell" id="A4FD5EFA-1D65-1DA3-F318-1B047B3C09EC">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:45 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="baujahr" id="FBF05CCA-BC82-02B7-6A2E-A6587EDCF7A5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:54:53 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zulassungschein_root" id="625032FD-C65F-774A-0B94-5638163D611D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:55:04 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C354ED19-7C76-07BD-B59F-7BFE9F2344AE" name="Key_1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:55:43 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>4359E087-6FAF-AF9A-ADB4-964978EC3DAF</newElementsIDs>
+<usedAttributes>
+<attributeRef>4359E087-6FAF-AF9A-ADB4-964978EC3DAF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

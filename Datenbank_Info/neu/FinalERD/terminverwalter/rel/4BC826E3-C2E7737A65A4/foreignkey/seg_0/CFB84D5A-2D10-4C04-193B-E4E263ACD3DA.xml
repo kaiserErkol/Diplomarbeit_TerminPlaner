@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CFB84D5A-2D10-4C04-193B-E4E263ACD3DA" containerWithKeyObject="311F8B59-924E-0945-FED9-7299A5B8AE13" localFKIndex="80BE1F88-0B1D-846F-0F15-170213AFB8DC" name="Reparatur_Fahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>61400E8B-CC27-0154-396E-582887E00CBE</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<referredTableLongName>Fahrzeug</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F2A0F1D0-1829-51F2-D9FC-07B670383471</referredTableID>
+<keyObject>6BD37954-87F6-8D5E-D97E-BA4A2F5579F7</keyObject>
+<referredKeyID>6BD37954-87F6-8D5E-D97E-BA4A2F5579F7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>fahrzeug_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

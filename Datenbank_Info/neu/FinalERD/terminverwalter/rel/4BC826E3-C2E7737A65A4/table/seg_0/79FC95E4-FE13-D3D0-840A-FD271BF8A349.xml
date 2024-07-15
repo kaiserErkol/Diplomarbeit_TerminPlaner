@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="79FC95E4-FE13-D3D0-840A-FD271BF8A349" name="Leihvertrag">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DAB736A4-D335-5226-7031-F0E6EFD04E7C</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="vertrag_ID" id="E3738850-BC61-11AF-5292-2B8DBB57A576">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>665F3875-4A98-279F-D5C8-22D6F269DF9C</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ausleihdatum" id="3BBD7160-852D-7747-C124-F58991B2C360">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>66EE9C71-11C6-4436-D98D-63ACA77596E2</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rueckgabedatum" id="97270938-ABC6-576B-17AE-741D9143B32A">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>D221B55E-CD09-DD6B-FD61-5F8D9552CEDD</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kunde_kunden_ID" id="27281F3D-C1C6-13D2-5BE0-988EB049B1D1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>4AFB52F4-27AF-0EFB-3831-070BAB086E69</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7139357-D2AB-BD22-385C-633F157DE0D6" referredColumn="78EDB213-DF13-879E-509F-CC0D7C518AA7"/>
+</associations>
+</Column>
+<Column name="Leihfahrzeug_leihfahrzeug_ID" id="396404DB-DE7A-A8EC-334D-77E2AED59F82">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>142235C7-37B2-AB5E-E643-48929DFF6E1C</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE2CF697-C944-2DCF-D17F-55B487DAD73A" referredColumn="33EFF291-9DEA-F8DA-2B96-93FE2F5E9EC6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C8AD9391-CE0F-3418-504D-42583E59EDED" name="Leihvertrag_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>8494691C-F9A5-2D37-CC6F-EF269A8CE66A</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3738850-BC61-11AF-5292-2B8DBB57A576"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27A52397-8712-C8AD-4201-BA923C03298F" name="Leihvertrag__IDX">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>B26CA256-2500-6831-21C0-4F0E5AACF1C2</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="27281F3D-C1C6-13D2-5BE0-988EB049B1D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33926B8E-2C97-AF7E-D42B-825EA3A2F055" name="Leihvertrag__IDXv1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>DA5D0CC5-99B1-1CE7-877C-DA8C049AF157</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="396404DB-DE7A-A8EC-334D-77E2AED59F82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DDDF374-25D2-90E0-908D-058F0FB6D407" name="Leihvertrag_Kunde_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>B26CA256-2500-6831-21C0-4F0E5AACF1C2</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27281F3D-C1C6-13D2-5BE0-988EB049B1D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46FF530D-FED3-1BD9-87BB-FA746484E31C" name="Leihvertrag_Leihfahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DA5D0CC5-99B1-1CE7-877C-DA8C049AF157</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="396404DB-DE7A-A8EC-334D-77E2AED59F82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

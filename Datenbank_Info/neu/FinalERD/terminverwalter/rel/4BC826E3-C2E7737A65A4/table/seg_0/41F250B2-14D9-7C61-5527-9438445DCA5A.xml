@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="41F250B2-14D9-7C61-5527-9438445DCA5A" name="Mitarbeiter">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>E4F36370-D9E7-BE4A-4838-F4CA04F13E4A</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mitarbeiter_ID" id="D4ABCA75-4532-48FD-236A-89F6949EA495">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>57F7FCC9-C57E-FBFC-8F7F-D34E596510F3</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefonnummer" id="019D4883-912B-58C6-C528-9EF2F53EDDFD">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>A2E6A2FC-427D-35C2-B022-44322FD25C2C</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="8A80ADD8-A2BB-6AB0-8C38-A52F16F3E3D3">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>0489A243-2BF9-8917-F1EA-F0B061D79A4D</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B245D016-EE4C-E31C-2DB6-FA8F336ABE64" name="Mitarbeiter_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DB19064F-6A95-4C1E-B5B4-7693D1B7D973</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4ABCA75-4532-48FD-236A-89F6949EA495"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

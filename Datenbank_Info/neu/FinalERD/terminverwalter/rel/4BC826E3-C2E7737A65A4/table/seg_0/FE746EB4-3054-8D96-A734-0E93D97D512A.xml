@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE746EB4-3054-8D96-A734-0E93D97D512A" name="Mechaniker">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>AA66B11E-FA17-7AB7-F899-2FE919D713A1</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mitarbeiter_ID" id="41302752-6801-4052-0C2D-4E1CA4CFF733">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>57F7FCC9-C57E-FBFC-8F7F-D34E596510F3</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7826085-251A-07E4-E484-A4C7E9BA6569" referredColumn="D4ABCA75-4532-48FD-236A-89F6949EA495"/>
+</associations>
+</Column>
+<Column name="name" id="23B070D1-3730-435E-9519-B6327DC4732E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>5C914560-87E7-A528-BF5E-41CD869997EE</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5CA6A916-45BC-164E-D45D-26099C1210CF" name="Mechaniker_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DB19064F-6A95-4C1E-B5B4-7693D1B7D973</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41302752-6801-4052-0C2D-4E1CA4CFF733"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27D9A131-9F25-451B-AC01-48CB9083E405" name="Mechaniker_Mitarbeiter_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>43BE9FA2-5151-6837-CC32-AEAB7276876B</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41302752-6801-4052-0C2D-4E1CA4CFF733"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

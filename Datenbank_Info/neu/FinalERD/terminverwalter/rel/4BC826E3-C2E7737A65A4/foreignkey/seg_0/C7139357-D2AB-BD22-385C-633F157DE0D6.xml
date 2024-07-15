@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7139357-D2AB-BD22-385C-633F157DE0D6" containerWithKeyObject="79FC95E4-FE13-D3D0-840A-FD271BF8A349" localFKIndex="6DDDF374-25D2-90E0-908D-058F0FB6D407" name="Leihvertrag_Kunde_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>B26CA256-2500-6831-21C0-4F0E5AACF1C2</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<referredTableLongName>Kunde</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E4F3B7AA-2D29-3693-8DEC-A5F39FF8FA4A</referredTableID>
+<keyObject>946FCDF5-15A9-3076-3F46-C8A345A03374</keyObject>
+<referredKeyID>946FCDF5-15A9-3076-3F46-C8A345A03374</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>kunden_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

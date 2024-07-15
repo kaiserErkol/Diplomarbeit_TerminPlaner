@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D3D3D390-704F-4C40-8E70-5A3CF3BFCDEB" name="Kostenvorschlag">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:39:37 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="kostenvrs_ID" id="F8B38DA9-6B40-AC51-2E49-63EAEB45CA13">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:39:44 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum" id="A63F3A47-2126-E613-74B1-AF26C706B72D">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:40:18 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kosten" id="3FB55A0F-5D0A-0260-4A89-3BCE041FA702">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:40:34 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="beschreibung" id="E378E628-C348-4EDE-FC88-B8D90B77ED19">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:40:47 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="reparatur_ID" id="7AE8D978-63B4-E1F6-EF56-688232B92DB1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:45:24 UTC</createdTime>
+<generatorID>A98593DF-B388-9066-F70C-73457FCAD1FE</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<referedAttribute>635F010D-002B-E752-F0AC-5A376142FDEF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="04F58760-1886-61F8-8D7D-68B7705C8EC5" name="Key_1">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 18:41:00 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<engineerTo>
+<item key="4BC826E3-63A8-CDAC-4AA7-C2E7737A65A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>F8B38DA9-6B40-AC51-2E49-63EAEB45CA13</newElementsIDs>
+<usedAttributes>
+<attributeRef>F8B38DA9-6B40-AC51-2E49-63EAEB45CA13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

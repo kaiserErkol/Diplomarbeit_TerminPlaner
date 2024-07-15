@@ -1,53 +1,50 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Date;
-import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Fahrzeug {
-
     @Id
-    private String fahrzeug_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int fahrzeugId;
 
+    private String kennzeichen;
     private String marke;
     private String modell;
-    private Date baujahr;
-    private int kilometerstand;
-    private String zulassungsschein;
+    private Date baujahr;     //java util
+    private String zulassungsscheinRoot;
 
-    @ManyToOne
-    @JoinColumn(name = "kunde_kunde_id", nullable = false)
-    @JsonBackReference
-    private Kunde kunde;
-
-    @OneToMany(mappedBy = "fahrzeug",  cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Wartungsverlauf> wartungsverlaeufe;
-
-    // Getters and Setters
-
-    public Fahrzeug() {
-    }
-
-    public Fahrzeug(String fahrzeug_id, String marke, String modell, Date baujahr, int kilometerstand, String zulassungsschein, Kunde kunde) {
-        this.fahrzeug_id = fahrzeug_id;
+    public Fahrzeug(String kennzeichen, String marke, String modell, Date baujahr, String zulassungsscheinRoot) {
+        this.kennzeichen = kennzeichen;
         this.marke = marke;
         this.modell = modell;
         this.baujahr = baujahr;
-        this.kilometerstand = kilometerstand;
-        this.zulassungsschein = zulassungsschein;
-        this.kunde = kunde;
+        this.zulassungsscheinRoot = zulassungsscheinRoot;
     }
 
-    public String getFahrzeug_id() {
-        return fahrzeug_id;
+    public Fahrzeug() {}
+
+    public int getFahrzeugId() {
+        return fahrzeugId;
     }
 
-    public void setFahrzeug_id(String fahrzeug_id) {
-        this.fahrzeug_id = fahrzeug_id;
+    public void setFahrzeugId(int fahrzeugId) {
+        this.fahrzeugId = fahrzeugId;
+    }
+
+    public String getKennzeichen() {
+        return kennzeichen;
+    }
+
+    public void setKennzeichen(String kennzeichen) {
+        this.kennzeichen = kennzeichen;
     }
 
     public String getMarke() {
@@ -74,35 +71,24 @@ public class Fahrzeug {
         this.baujahr = baujahr;
     }
 
-    public int getKilometerstand() {
-        return kilometerstand;
+    public String getZulassungsscheinRoot() {
+        return zulassungsscheinRoot;
     }
 
-    public void setKilometerstand(int kilometerstand) {
-        this.kilometerstand = kilometerstand;
+    public void setZulassungsscheinRoot(String zulassungsscheinRoot) {
+        this.zulassungsscheinRoot = zulassungsscheinRoot;
     }
 
-    public String getZulassungsschein() {
-        return zulassungsschein;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fahrzeug fahrzeug = (Fahrzeug) o;
+        return fahrzeugId == fahrzeug.fahrzeugId && Objects.equals(kennzeichen, fahrzeug.kennzeichen) && Objects.equals(marke, fahrzeug.marke) && Objects.equals(modell, fahrzeug.modell) && Objects.equals(baujahr, fahrzeug.baujahr) && Objects.equals(zulassungsscheinRoot, fahrzeug.zulassungsscheinRoot);
     }
 
-    public void setZulassungsschein(String zulassungsschein) {
-        this.zulassungsschein = zulassungsschein;
-    }
-
-    public Kunde getKunde() {
-        return kunde;
-    }
-
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
-    }
-
-    public List<Wartungsverlauf> getWartungsverlaeufe() {
-        return wartungsverlaeufe;
-    }
-
-    public void setWartungsverlaeufe(List<Wartungsverlauf> wartungsverlaeufe) {
-        this.wartungsverlaeufe = wartungsverlaeufe;
+    @Override
+    public int hashCode() {
+        return Objects.hash(fahrzeugId, kennzeichen, marke, modell, baujahr, zulassungsscheinRoot);
     }
 }

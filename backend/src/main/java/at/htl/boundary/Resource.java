@@ -18,21 +18,21 @@ public class Resource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello World";
+        return "Hello from Quarkus REST\"";
     }
 
     @GET
     @Path("/kunden")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Kunde> getAllKunden() {
-        return repository.getAllKunden();
+        return repository.getAllKunde();
     }
 
     @GET
-    @Path("/benachrichtigungen")
+    @Path("/feedback")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Benachrichtigung> getAllBenachrichtigung() {
-        return repository.getAllBenachrichtigung();
+    public List<Feedback> getAllFeedback() {
+        return repository.getAllFeedback();
     }
 
     @GET
@@ -43,7 +43,7 @@ public class Resource {
     }
 
     @GET
-    @Path("/kostenvorschlaege")
+    @Path("/kostenvorschlag")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Kostenvorschlag> getAllKostenvorschlag() {
         return repository.getAllKostenvorschlag();
@@ -57,24 +57,38 @@ public class Resource {
     }
 
     @GET
-    @Path("/services")
+    @Path("/reparaturtyp")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Service> getAllServices() {
-        return repository.getAllService();
+    public List<Reparaturtyp> getAllReparaturtyp() {
+        return repository.getAllReparaturtyp();
     }
 
     @GET
-    @Path("/termine")
+    @Path("/termin")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Termin> getAllTermine() {
         return repository.getAllTermine();
     }
 
     @GET
-    @Path("/verleihautos")
+    @Path("/terminvorschlag")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Verleihauto> getAllVerleihauto() {
-        return repository.getAllVerleihauto();
+    public List<Termin> getAllTerminvorschlag() {
+        return repository.getAllTerminvorschlag();
+    }
+
+    @GET
+    @Path("/leihfahrzeug")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Leihfahrzeug> getAllLeihfahrzeug() {
+        return repository.getAllLeihfahrzeug();
+    }
+
+    @GET
+    @Path("/leihvertrag")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Leihvertrag> getAllLeihvertrag() {
+        return repository.getAllLeihvertrag();
     }
 
     @GET
@@ -85,11 +99,10 @@ public class Resource {
     }
 
     @GET
-    @Path("/wartungsverlaeufe")
+    @Path("/reparatur")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Wartungsverlauf> getAllWartungsverlauf() {
-        return repository.getAllWartungsverlauf();
+    public List<Reparatur> getAllReparatur() {
+        return repository.getAllReparatur();
     }
-
 
 }

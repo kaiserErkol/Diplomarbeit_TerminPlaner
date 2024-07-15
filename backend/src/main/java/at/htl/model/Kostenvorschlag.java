@@ -1,45 +1,47 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+
+import java.util.Date;
+import java.util.Objects;
 
 @Entity
 public class Kostenvorschlag {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "kostenvorschlagSeq")
-    @SequenceGenerator(name = "kostenvorschlagSeq", sequenceName = "kostenvorschlag_id_seq", allocationSize = 1)
-    private int kostenvorschlag_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int kostenvrsId;
 
+    private Date datum;
     private double kosten;
+    private String beschreibung;
 
-    @ManyToOne
-    @JoinColumn(name = "kunde_kunde_id", nullable = false)
-    @JsonBackReference
-    private Kunde kunde;
+    @OneToOne
+    @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
+    private Reparatur reparatur;
 
-    @ManyToOne
-    @JoinColumn(name = "verwalter_verwalter_id", nullable = false)
-    @JsonBackReference
-    private Verwalter verwalter;
-
-    // Getters and Setters
-
-    public Kostenvorschlag() {
-    }
-
-    public Kostenvorschlag(int kostenvorschlag_id, double kosten, Kunde kunde) {
-        this.kostenvorschlag_id = kostenvorschlag_id;
+    public Kostenvorschlag(Date datum, double kosten, String beschreibung, Reparatur reparatur) {
+        this.datum = datum;
         this.kosten = kosten;
-        this.kunde = kunde;
+        this.beschreibung = beschreibung;
+        this.reparatur = reparatur;
     }
 
-    public int getKostenvorschlag_id() {
-        return kostenvorschlag_id;
+    public Kostenvorschlag() {}
+
+    public int getKostenvrsId() {
+        return kostenvrsId;
     }
 
-    public void setKostenvorschlag_id(int kostenvorschlag_id) {
-        this.kostenvorschlag_id = kostenvorschlag_id;
+    public void setKostenvrsId(int kostenvrsId) {
+        this.kostenvrsId = kostenvrsId;
+    }
+
+    public Date getDatum() {
+        return datum;
+    }
+
+    public void setDatum(Date datum) {
+        this.datum = datum;
     }
 
     public double getKosten() {
@@ -50,19 +52,33 @@ public class Kostenvorschlag {
         this.kosten = kosten;
     }
 
-    public Kunde getKunde() {
-        return kunde;
+    public String getBeschreibung() {
+        return beschreibung;
     }
 
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
     }
 
-    public Verwalter getVerwalter() {
-        return verwalter;
+    public Reparatur getReparatur() {
+        return reparatur;
     }
 
-    public void setVerwalter(Verwalter verwalter) {
-        this.verwalter = verwalter;
+    public void setReparatur(Reparatur reparatur) {
+        this.reparatur = reparatur;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Kostenvorschlag that = (Kostenvorschlag) o;
+        return kostenvrsId == that.kostenvrsId && Double.compare(kosten, that.kosten) == 0 && Objects.equals(datum, that.datum) && Objects.equals(beschreibung, that.beschreibung) && Objects.equals(reparatur, that.reparatur);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(kostenvrsId, datum, kosten, beschreibung, reparatur);
     }
 }
+

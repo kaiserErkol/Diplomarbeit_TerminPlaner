@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A1F3A42-7017-7574-B54A-AA2B4E677CD6" name="Reparatureintrag">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>620AE364-1440-5DD6-DEC6-7A569AABFDDB</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="eintrag_ID" id="EB692D85-4741-3B15-F996-8D661371581E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>CF15400E-B84C-C1C4-B4B6-0B1BE92D02E9</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="beschreibung" id="D5FFC60C-9540-B18D-4C6F-3D6EC005C828">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>4D6A7321-798E-33F2-0488-B3C625F10A41</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Abschlussdatum" id="56852D16-302A-DAF7-517E-79E135561DC3">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>70A8E11C-D3D7-7D83-AEB7-3B9A2CCF426F</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reparatur_reparatur_ID" id="DF14677C-3710-2ED8-D364-D2B01CF735C5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>0E3DCE92-ECCF-69D2-7AE1-3B19002140D5</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22004310-FBA0-328C-701E-EC423133D966" referredColumn="3576E7B8-C64E-41E5-7E92-BB4C95B11558"/>
+</associations>
+</Column>
+<Column name="Mitarbeiter_mitarbeiter_ID" id="14F0C82D-8E92-18B9-1366-4557724D3F70">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>2416ECBE-3547-8CE4-726E-623B8DEEF28C</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD62A4D9-B48A-0EB6-017F-00E270DAB401" referredColumn="D4ABCA75-4532-48FD-236A-89F6949EA495"/>
+</associations>
+</Column>
+<Column name="status" id="CD56070A-1C98-586B-08BC-C385FDCB738F">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>6AEDCACD-73F5-31BC-9F44-198FABF3A45B</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="471E738F-84D1-F9D2-70BE-D498ABE80076" name="Reparatureintrag_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>8C627316-48AC-D775-AE29-F18225EE27F7</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB692D85-4741-3B15-F996-8D661371581E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2FFF54A-6A45-111A-4446-2288088C2267" name="Reparatureintrag__IDX">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:15 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>DD8843B4-EBF3-2A05-4C75-AF13EFB5F343</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="DF14677C-3710-2ED8-D364-D2B01CF735C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69F19BE6-41EE-F13A-58B8-B9F6E4104968" name="Reparatureintrag_Mitarbeiter_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>25430515-4411-3037-F909-F89E7D8BE4C5</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14F0C82D-8E92-18B9-1366-4557724D3F70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06C106C3-4CD7-0684-4E5C-EF7F9873362A" name="Reparatureintrag_Reparatur_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DD8843B4-EBF3-2A05-4C75-AF13EFB5F343</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF14677C-3710-2ED8-D364-D2B01CF735C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

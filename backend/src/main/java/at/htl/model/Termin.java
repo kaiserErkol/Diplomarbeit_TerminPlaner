@@ -1,65 +1,54 @@
 package at.htl.model;
 
 import at.htl.enums.TerminStatus;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
 import java.util.Date;
-import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Termin {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "terminSeq")
-    @SequenceGenerator(name = "terminSeq", sequenceName = "termin_id_seq", allocationSize = 1)
-    private int termin_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int terminId;
 
     private Date datum;
     private Date uhrzeit;
+    private String notiz;
+
+    @Enumerated(EnumType.STRING)
     private TerminStatus status;
-    private String notizen;
+
+    @OneToOne
+    @JoinColumn(name = "tvrs_terminvrs_id", nullable = false, unique = true)
+    private Terminvorschlag terminvorschlag;
+
+    @OneToOne
+    @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
+    private Reparatur reparatur;
 
     @ManyToOne
-    @JoinColumn(name = "service_service_id", nullable = false)
-    @JsonBackReference
-    private Service service;
-
-    @ManyToOne
-    @JoinColumn(name = "kunde_kunde_id", nullable = false)
-    @JsonBackReference
-    private Kunde kunde;
-
-    @ManyToOne
-    @JoinColumn(name = "verwalter_verwalter_id", nullable = false)
-    @JsonBackReference
+    @JoinColumn(name = "v_verwalter_id", nullable = false)
     private Verwalter verwalter;
 
-    @OneToMany(mappedBy = "termin", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Mechaniker> mechaniker;
-
-    // Getters and Setters
-
-    public Termin() {
-    }
-
-    public Termin(int termin_id, Date datum, Date uhrzeit, TerminStatus status, String notizen, Service service, Kunde kunde) {
-        this.termin_id = termin_id;
+    public Termin(Date datum, Date uhrzeit, String notiz, TerminStatus status, Terminvorschlag terminvorschlag, Reparatur reparatur, Verwalter verwalter) {
         this.datum = datum;
         this.uhrzeit = uhrzeit;
+        this.notiz = notiz;
         this.status = status;
-        this.notizen = notizen;
-        this.service = service;
-        this.kunde = kunde;
+        this.terminvorschlag = terminvorschlag;
+        this.reparatur = reparatur;
+        this.verwalter = verwalter;
     }
 
-    public int getTermin_id() {
-        return termin_id;
+    public Termin() {}
+
+    public int getTerminId() {
+        return terminId;
     }
 
-    public void setTermin_id(int termin_id) {
-        this.termin_id = termin_id;
+    public void setTerminId(int terminId) {
+        this.terminId = terminId;
     }
 
     public Date getDatum() {
@@ -78,36 +67,20 @@ public class Termin {
         this.uhrzeit = uhrzeit;
     }
 
-    public TerminStatus getStatus() {
-        return status;
+    public Terminvorschlag getTerminvorschlag() {
+        return terminvorschlag;
     }
 
-    public void setStatus(TerminStatus status) {
-        this.status = status;
+    public void setTerminvorschlag(Terminvorschlag terminvorschlag) {
+        this.terminvorschlag = terminvorschlag;
     }
 
-    public String getNotizen() {
-        return notizen;
+    public Reparatur getReparatur() {
+        return reparatur;
     }
 
-    public void setNotizen(String notizen) {
-        this.notizen = notizen;
-    }
-
-    public Service getService() {
-        return service;
-    }
-
-    public void setService(Service service) {
-        this.service = service;
-    }
-
-    public Kunde getKunde() {
-        return kunde;
-    }
-
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
+    public void setReparatur(Reparatur reparatur) {
+        this.reparatur = reparatur;
     }
 
     public Verwalter getVerwalter() {
@@ -118,11 +91,32 @@ public class Termin {
         this.verwalter = verwalter;
     }
 
-    public List<Mechaniker> getMechaniker() {
-        return mechaniker;
+    public TerminStatus getStatus() {
+        return status;
     }
 
-    public void setMechaniker(List<Mechaniker> mechaniker) {
-        this.mechaniker = mechaniker;
+    public void setStatus(TerminStatus status) {
+        this.status = status;
+    }
+
+    public String getNotiz() {
+        return notiz;
+    }
+
+    public void setNotiz(String notiz) {
+        this.notiz = notiz;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Termin termin = (Termin) o;
+        return terminId == termin.terminId && Objects.equals(datum, termin.datum) && Objects.equals(uhrzeit, termin.uhrzeit) && status == termin.status && Objects.equals(terminvorschlag, termin.terminvorschlag) && Objects.equals(reparatur, termin.reparatur) && Objects.equals(verwalter, termin.verwalter);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(terminId, datum, uhrzeit, status, terminvorschlag, reparatur, verwalter);
     }
 }

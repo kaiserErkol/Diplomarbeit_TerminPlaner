@@ -1,98 +1,104 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
-import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class Verwalter {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "verwalterSeq")
-    @SequenceGenerator(name = "verwalterSeq", sequenceName = "verwalter_id_seq", allocationSize = 1)
-    private int verwalter_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int verwalterId;
 
-    private String bezeichnung;
-
-    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Kostenvorschlag> kostenvorschlaege;
-
-    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Termin> termine;
-
-    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<TerminVorschlag> terminvorschlaege;
-
-    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Verleih> verleihList;
-
-    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<TerminAnfrage> terminanfragen;
-
-    // Getters and Setters
+    private String namekrzl;
+    private String vorname;
+    private String nachname;
+    private String telefonnummer;
+    private String email;
+    private String adresse;
 
 
-    public Verwalter() {
+
+    public Verwalter(String namekrzl, String vorname, String nachname, String telefonnummer, String email, String adresse) {
+        this.namekrzl = namekrzl;
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.telefonnummer = telefonnummer;
+        this.email = email;
+        this.adresse = adresse;
     }
 
-    public int getVerwalter_id() {
-        return verwalter_id;
+    public Verwalter() {}
+
+
+    public int getVerwalterId() {
+        return verwalterId;
     }
 
-    public void setVerwalter_id(int verwalter_id) {
-        this.verwalter_id = verwalter_id;
+    public void setVerwalterId(int verwalterId) {
+        this.verwalterId = verwalterId;
     }
 
-    public String getBezeichnung() {
-        return bezeichnung;
+    public String getNamekrzl() {
+        return namekrzl;
     }
 
-    public void setBezeichnung(String bezeichnung) {
-        this.bezeichnung = bezeichnung;
+    public void setNamekrzl(String namekrzl) {
+        this.namekrzl = namekrzl;
     }
 
-    public List<Kostenvorschlag> getKostenvorschlaege() {
-        return kostenvorschlaege;
+    public String getVorname() {
+        return vorname;
     }
 
-    public void setKostenvorschlaege(List<Kostenvorschlag> kostenvorschlaege) {
-        this.kostenvorschlaege = kostenvorschlaege;
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
     }
 
-    public List<Termin> getTermine() {
-        return termine;
+    public String getNachname() {
+        return nachname;
     }
 
-    public void setTermine(List<Termin> termine) {
-        this.termine = termine;
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
     }
 
-    public List<TerminVorschlag> getTerminvorschlaege() {
-        return terminvorschlaege;
+    public String getTelefonnummer() {
+        return telefonnummer;
     }
 
-    public void setTerminvorschlaege(List<TerminVorschlag> terminvorschlaege) {
-        this.terminvorschlaege = terminvorschlaege;
+    public void setTelefonnummer(String telefonnummer) {
+        this.telefonnummer = telefonnummer;
     }
 
-    public List<Verleih> getVerleihList() {
-        return verleihList;
+    public String getEmail() {
+        return email;
     }
 
-    public void setVerleihList(List<Verleih> verleihList) {
-        this.verleihList = verleihList;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public List<TerminAnfrage> getTerminanfragen() {
-        return terminanfragen;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setTerminanfragen(List<TerminAnfrage> terminanfragen) {
-        this.terminanfragen = terminanfragen;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Verwalter verwalter = (Verwalter) o;
+        return verwalterId == verwalter.verwalterId && Objects.equals(namekrzl, verwalter.namekrzl) && Objects.equals(vorname, verwalter.vorname) && Objects.equals(nachname, verwalter.nachname) && Objects.equals(telefonnummer, verwalter.telefonnummer) && Objects.equals(email, verwalter.email) && Objects.equals(adresse, verwalter.adresse);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(verwalterId, namekrzl, vorname, nachname, telefonnummer, email, adresse);
     }
 }

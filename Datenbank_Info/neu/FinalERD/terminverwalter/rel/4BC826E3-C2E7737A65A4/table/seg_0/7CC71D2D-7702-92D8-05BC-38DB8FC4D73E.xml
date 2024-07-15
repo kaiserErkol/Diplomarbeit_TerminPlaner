@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7CC71D2D-7702-92D8-05BC-38DB8FC4D73E" name="Terminvorschlag">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>41250D55-D08B-B1AD-1A27-29CEEEDE66E3</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="terminvrs_ID" id="D09193A8-990B-93E5-EE9C-0B96F7D0165B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>FA181FB9-2F9C-89B0-3AAC-65E92BB9F4E8</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="datum" id="9BF472DB-836B-4771-7AE7-5E6CB06CE334">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>0955C798-1100-D9E9-766F-CB2C6E3EBC3F</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="uhrzeit" id="C8DEC226-1438-6F3A-D945-415A10DBEF05">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>FDE4A0B9-1DA6-661F-2943-3E61A91B8CA2</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kostenvorschlag_kostenvrs_ID" id="B298E6B6-A7B2-B21C-B13D-A1B89E28C5DF">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>5D4B9245-A622-C56E-FD36-6A86C247FB2F</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08EA472C-FFDA-48DF-2935-5F3399B3BA0F" referredColumn="CA7F0FA7-B646-31B2-E014-38AEA66675B5"/>
+</associations>
+</Column>
+<Column name="Kunde_kunden_ID" id="78B82699-CD3A-BF20-2335-0BA9BCAF0AEA">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>A21D00DB-FFFE-8309-9267-856A2B4CA6A3</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7D0B828-D30E-09F7-48D6-316B7F732CED" referredColumn="78EDB213-DF13-879E-509F-CC0D7C518AA7"/>
+</associations>
+</Column>
+<Column name="bestaetigt" id="AE0860A0-EF78-29B2-9C16-2F2B90284C9A">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>558D42F9-DD63-592B-7E51-7BAE18091ACB</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0A59348B-9D59-5241-113E-8178640E4C37" name="Terminvorschlag_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>01EB36FD-9F36-5E0E-6BFB-A1C137B8609E</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D09193A8-990B-93E5-EE9C-0B96F7D0165B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12628426-8E3C-ED63-BE99-B55802AD5C19" name="Terminvorschlag_Kostenvorschlag_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>878242B9-130A-E010-9C94-354C681976C0</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B298E6B6-A7B2-B21C-B13D-A1B89E28C5DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCCDA967-A902-3C0D-0C3E-36DCE825A1AC" name="Terminvorschlag_Kunde_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>7000BAAC-9443-642B-6659-BD354463B681</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78B82699-CD3A-BF20-2335-0BA9BCAF0AEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

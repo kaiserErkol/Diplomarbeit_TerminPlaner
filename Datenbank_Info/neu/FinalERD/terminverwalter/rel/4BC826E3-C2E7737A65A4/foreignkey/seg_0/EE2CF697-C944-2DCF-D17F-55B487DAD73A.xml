@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EE2CF697-C944-2DCF-D17F-55B487DAD73A" containerWithKeyObject="79FC95E4-FE13-D3D0-840A-FD271BF8A349" localFKIndex="46FF530D-FED3-1BD9-87BB-FA746484E31C" name="Leihvertrag_Leihfahrzeug_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>DA5D0CC5-99B1-1CE7-877C-DA8C049AF157</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<referredTableLongName>Leihfahrzeug</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>54FFA77B-B9EB-050B-55EF-BB7D8CB54BFC</referredTableID>
+<keyObject>B22E148A-13FD-06FD-5F2B-6E36D91A8EC1</keyObject>
+<referredKeyID>B22E148A-13FD-06FD-5F2B-6E36D91A8EC1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>leihfahrzeug_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

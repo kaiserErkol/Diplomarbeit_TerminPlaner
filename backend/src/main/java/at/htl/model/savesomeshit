@@ -1,0 +1,395 @@
+/**
+     * Der Kunde erstellt einen Eintrag in der Reparaturtabelle
+     * @Parameter kundeId, kennzeichen, reparaturtypId
+     * @return Response
+     */
+    public Response createReparatur(int kundeId, String kennzeichen, int reparaturtypId) {
+        try {
+            return Response.ok("created Reparatur successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to create Reparatur").build();
+        }
+    }
+
+    /**
+     * erstellt die Terminanfrage
+     * @Parameter String fahrzeug_Id, int service_Id, int kunde_Id, int kilometerstand, date datum, String notiz
+     * @return Terminanfrage
+     */
+    public TerminAnfrage createTerminanfrage(String fahrzeug_Id, int service_Id, int kunde_Id, int kilometerstand, Date datum, String notiz) {
+        return null;
+    }
+
+    /**
+     * Der Verwalter schickt dem Kunden einen Kostenvorschlag für den verlangten Fahrzeug-Service
+     * @Parameter int kunde_Id, Kostenvorschlag kostenvorschlag
+     * @return Response
+     */
+    public Response sendKostenvorschlag(int kunde_Id, Kostenvorschlag kostenvorschlag) {
+        try {
+            return Response.ok("sent Kostenvorschlag successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to send Kostenvorschlag").build();
+        }
+    }
+
+    /**
+     * Kunde akzeptiert den Kostenvorschlag
+     * @Parameter int kostenVorschlag_Id, int kunde_Id
+     * @return Response
+     */
+    public Response acceptKostenvorschlag(int kostenVorschlag_Id, int kunde_Id) {
+        try {
+            return Response.ok("accepted Kostenvorschlag successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to accept Kostenvorschlag").build();
+        }
+    }
+
+    /**
+     * erstellt den Kostenvorschlag für einen Kunden
+     * @Parameter double kosten, Kunde kunde_Id
+     * @return Response
+     */
+    public Response createKostenvorschlag(double kosten, Kunde kunde_Id) {
+        try {
+            return Response.ok("created Kostenvorschlag successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to create Kostenvorschlag").build();
+        }
+    }
+
+    /**
+     * Der Verwalter schickt einem bestimmten Kunden Terminvorschläge; Die Fahrzeuginformation bekommt
+     * der Verwalter vom zugesendeten Terminanfrage
+     * @Parameter int Kunde_Id, List<TerminVorschlag> terminVorschlagList
+     * @return Response
+     */
+    public Response sendTerminvorschlagList(int Kunde_Id, List<TerminVorschlag> terminVorschlagList) {
+        try {
+            return Response.ok("sent successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to send Terminvorschlag").build();
+        }
+    }
+
+    /**
+     * Der Verwalter erstellt für den Kunden Terminvorschläge
+     * @Parameter Date datum, Time uhrzeit, Kunde kunde, Verwalter verwalter
+     * @return Response
+     */
+    public Response createTerminvorschlag(Date datum, Time uhrzeit, Kunde kunde) {
+        try {
+            return Response.ok("created Terminvorschlag successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to create Terminvorschlag").build();
+        }
+    }
+
+    /**
+     * Der Kunde akzeptiert einen der vorgeschlagenen Termine
+     * @Parameter TerminVorschlag acceptedTermin
+     * @return Response
+     */
+    public Response acceptTerminvoschlag() {
+        try {
+            return Response.ok("accepted Terminvoschlag successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to accept Terminvoschlag").build();
+        }
+    }
+
+    /**
+     * fügt den Termin in die Termin Tabelle ein
+     * @Parameter Date datum, Time uhrzeit, TerminStatus status, String notiz, Service service, Kunde kunde
+     * @return Response
+     */
+    public Response createTermin(Date datum, Time uhrzeit, TerminStatus status, String notiz, Service service, Kunde kunde) {
+        try {
+            return Response.ok("created Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to create Termin").build();
+        }
+    }
+
+    /**
+     * ausleihen von einem Leihauto bei einer großer Reparatur
+     * @Parameter Date verleihDatum, int verleihauto_Id
+     * @return Response
+     */
+    public Response ausleihen(Date verleihDatum, Date rueckgabeDatum, int verleihauto_Id) {
+        try {
+            return Response.ok("ausleihen successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to ausleihen").build();
+        }
+    }
+
+    /**
+     * verleihauto zurückgeben
+     * @Parameter Date rueckgabeDatum, int verleihauto_Id
+     * @return Response
+     */
+    public Response zurueckgeben(Date rueckgabeDatum, int verleihauto_Id) {
+        try {
+            return Response.ok("zurueckgeben successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to zurueckgeben").build();
+        }
+    }
+
+    /**
+     * löscht einen bestimmten Termin
+     * @Parameter int terminId
+     * @return Response
+     */
+    public Response deleteTerminById(int terminId) {
+        try {
+            return Response.ok("deleted Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to delete Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert den Status eines bestimmten Termins
+     * @Parameter Terminstatus terminStatusm, int terminId
+     * @return Response
+     */
+    public Response updateTerminstatus(TerminStatus terminStatus, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert das Datum eines bestimmten Termins
+     * @Parameter Date newDate, int terminId
+     * @return Response
+     */
+    public Response updateTerminDatum(Date newDate, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert die Uhrzeit eines bestimmten Termins
+     * @Parameter Time terminUhrzeit, int terminId
+     * @return Response
+     */
+    public Response updateTerminUhrzeit(Time uhrzeit, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert den Mechaniker eines bestimmten Termins
+     * @Parameter int mechaniker_Id, int terminId
+     * @return Response
+     */
+    public Response updateTerminMechaniker(int mechaniker_Id, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert den Service eines bestimmten Termins
+     * @Parameter int mechaniker_Id, int terminId
+     * @return Response
+     */
+    public Response updateTerminService(int service_Id, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Aktualisiert den Notzien eines bestimmten Termins
+     * @Parameter String Notiz, int terminId
+     * @return Response
+     */
+    public Response updateTerminNotiz(String newNotiz, int terminId) {
+        try {
+            return Response.ok("updated Termin successfully").build();
+        } catch (Exception e) {
+            return Response.status(422).entity("failed to update Termin").build();
+        }
+    }
+
+    /**
+     * Findet den Fahrzeug mit dem gegebenen Kennzeichen
+     * @Parameter String fahrzeug_Id
+     * @return Fahrzeug
+     */
+    public Fahrzeug findFahrzeugByKennzeichen(String kennzeichen) {
+        return null;
+    }
+
+    /**
+     * Findet den Service mit der gebebenen Id
+     * @Parameter int service_Id
+     * @return Service
+     */
+    public Reparaturtyp findReparaturtypById(int Reparaturtyp_Id) {
+        return null;
+    }
+
+    /**
+     * Findet den Kunden mit der gegebenen Id
+     * @Parameter int kunde_Id
+     * @return Kunde
+     */
+    public Kunde findKundeById(int kunde_Id) {
+        return null;
+    }
+
+
+
+
+    @Transactional
+    public List<Kunde> getAllKunde() {
+        return em.createQuery("SELECT k FROM Kunde k", Kunde.class).getResultList();
+    }
+
+    @Transactional
+    public List<Fahrzeug> getAllFahrzeug() {
+        return em.createQuery("SELECT fa FROM Fahrzeug fa", Fahrzeug.class).getResultList();
+    }
+
+    @Transactional
+    public List<Feedback> getAllFeedback() {
+        return em.createQuery("SELECT f FROM Feedback f", Feedback.class).getResultList();
+    }
+
+    @Transactional
+    public List<Reparaturtyp> getAllReparaturtyp() {
+        return em.createQuery("SELECT rt FROM Reparaturtyp rt", Reparaturtyp.class).getResultList();
+    }
+
+    @Transactional
+    public List<Kostenvorschlag> getAllKostenvorschlag() {
+        return em.createQuery("select k from Kostenvorschlag k", Kostenvorschlag.class).getResultList();
+    }
+
+    @Transactional
+    public List<Mechaniker> getAllMechaniker() {
+        return em.createQuery("SELECT m FROM Mechaniker m", Mechaniker.class).getResultList();
+    }
+
+    @Transactional
+    public List<Termin> getAllTermine() {
+        return em.createQuery("SELECT t FROM Termin t ", Termin.class).getResultList();
+    }
+
+    @Transactional
+    public List<Termin> getAllTerminvorschlag() {
+        return em.createQuery("SELECT tv FROM Terminvorschlag tv", Termin.class).getResultList();
+    }
+
+    @Transactional
+    public List<Leihfahrzeug> getAllLeihfahrzeug() {
+        return em.createQuery("SELECT lf FROM Leihfahrzeug lf", Leihfahrzeug.class).getResultList();
+    }
+
+    @Transactional
+    public List<Leihvertrag> getAllLeihvertrag() {
+        return em.createQuery("SELECT lv FROM Leihvertrag lv", Leihvertrag.class).getResultList();
+    }
+
+    @Transactional
+    public List<Verwalter> getAllVerwalter() {
+        return em.createQuery("select v from Verwalter v", Verwalter.class).getResultList();
+    }
+
+    @Transactional
+    public List<Reparatur> getAllReparatur() {
+        return em.createQuery("select r from Reparatur r", Reparatur.class).getResultList();
+    }
+
+
+
+import.sql
+
+
+-- Insert into verwalter table first
+INSERT INTO verwalter (verwalter_id, bezeichnung)
+VALUES (NEXT VALUE FOR verwalter_id_seq, 'Verwalter 1');
+
+-- Inserts für die Tabelle kunde
+INSERT INTO kunde ( kunde_id, vorname, nachname, email, telefonnummer, adresse)
+VALUES (NEXT VALUE FOR kunde_id_seq ,'Max', 'Mustermann', 'max.mustermann@example.com', '0123456789', 'Musterstr. 1, 12345 Musterstadt');
+
+INSERT INTO kunde (kunde_id,vorname, nachname, email, telefonnummer, adresse)
+VALUES (NEXT VALUE FOR kunde_id_seq ,'Yasin', 'Erkol', 'yasin.erkol@example.com', '0123451241', 'Linzerstrasse 2, 2141 Linz');
+
+-- Inserts für die Tabelle service
+INSERT INTO service (service_id, bezeichnung, beschreibung, dauerinmin)
+VALUES
+    (NEXT VALUE FOR service_id_seq,'Getriebe-Reparatur', 'Eine umfassende und komplexe Reparatur, die den Austausch oder die Instandsetzung des Getriebes umfasst.', 0),
+    (NEXT VALUE FOR service_id_seq,'Bremsenservice', 'Eine Routinewartung, die die Überprüfung, Reinigung und gegebenenfalls den Austausch der Bremsbeläge und -scheiben beinhaltet.', 80),
+    (NEXT VALUE FOR service_id_seq,'Direktabwicklung', 'Ein flexibler Service, der je nach Bedarf sowohl kleine als auch große Reparaturen umfassen kann.', -1),
+    (NEXT VALUE FOR service_id_seq,'Service nach Herstellervorgabe', 'Ein Wartungsservice, der den spezifischen Vorgaben des Fahrzeugherstellers folgt und sowohl kleinere als auch umfangreichere Reparaturen umfassen kann.', -1),
+    (NEXT VALUE FOR service_id_seq,'Klima-Service', 'Eine Wartung des Klimaanlagensystems, inklusive Überprüfung und Auffüllung des Kältemittels.', 80),
+    (NEXT VALUE FOR service_id_seq,'Felgen/Reifen-Service', ' Ein Service, der das Wechseln, Auswuchten und eventuell die Reparatur von Reifen und Felgen beinhaltet.', 60),
+    (NEXT VALUE FOR service_id_seq,'Turbolader-Reparatur', 'Eine größere Reparatur, die den Austausch oder die Instandsetzung des Turboladers umfasst.', 0),
+    (NEXT VALUE FOR service_id_seq,'Ersatzteile', 'Austausch oder Einbau von Ersatzteilen, oft als Teil einer kleineren Reparatur.', 90),
+    (NEXT VALUE FOR service_id_seq,'Windschutzscheiben-Service', 'Umfassende Reparatur oder Austausch der Windschutzscheibe bei Schäden oder Rissen.', 0),
+    (NEXT VALUE FOR service_id_seq,'Lack-Instandsetzung', 'Reparatur von Lackschäden, wie Kratzer, Dellen oder größere Lackierarbeiten.', 0),
+    (NEXT VALUE FOR service_id_seq,'Karosserie-Arbeiten', 'Umfangreiche Reparaturen an der Fahrzeugkarosserie, die bei Unfallschäden oder Rost erforderlich sind.', 0),
+    (NEXT VALUE FOR service_id_seq,'Zahnriemen-Service', 'Eine wichtige Wartungsarbeit, die den Austausch des Zahnriemens umfasst, um Motorschäden zu vermeiden.', 0),
+    (NEXT VALUE FOR service_id_seq,'Fahrzeug-Tuning', 'Eine umfassende Modifikation des Fahrzeugs zur Leistungssteigerung oder optischen Verbesserung.', 0),
+    (NEXT VALUE FOR service_id_seq,'Pickerl-Überprüfungen', 'Eine gesetzlich vorgeschriebene Überprüfung des Fahrzeugs auf Verkehrstauglichkeit und Sicherheit.', 60);
+
+-- Inserts für die Tabelle termin
+INSERT INTO termin (termin_id, datum, uhrzeit, status, notizen, service_service_id, kunde_kunde_id, verwalter_verwalter_id)
+VALUES (NEXT VALUE FOR termin_id_seq,'2024-07-10', '10:00:00', 'GEPLANT', 'kein Notizen', 1, 1, 1);
+
+-- Inserts für die Tabelle mechaniker
+INSERT INTO mechaniker (mechaniker_id, vorname, nachname, namenkuerzel, telefon, termin_termin_id)
+VALUES (NEXT VALUE FOR mechaniker_id_seq, 'John', 'Doe', 'JD', '0987654321', 1);
+
+-- Inserts für die Tabelle benachrichtigung
+INSERT INTO benachrichtigung (benachrichtigung_id, nachricht, datum, kunde_kunde_id)
+VALUES (NEXT VALUE FOR benachrichtigung_id_seq, 'Ihr Fahrzeug ist zur Abholung bereit.', '2024-07-11', 1);
+
+-- Inserts für die Tabelle fahrzeug
+INSERT INTO fahrzeug (fahrzeug_id, kennzeichen, marke, modell, baujahr, kunde_kunde_id, kilometerstand, zulassungsschein)
+VALUES (NEXT VALUE FOR fahrzeug_id_seq,'AM123AB', 'BMW', '3er', '2020-05-15', 1, 150603, './assets/img1.jpg');
+
+-- Inserts für die Tabelle kostenvorschlag
+INSERT INTO kostenvorschlag (kostenvorschlag_id, kunde_kunde_id, kosten, notiz, verwalter_verwalter_id)
+VALUES (NEXT VALUE FOR kostenvorschlag_id_seq, 1, 500.00, 'keine Notiz', 1);
+
+-- Inserts für die Tabelle terminvorschlag
+INSERT INTO terminvorschlag (terminvorschlag_id, datum, uhrzeit, notiz, kunde_kunde_id, verwalter_verwalter_id)
+VALUES (NEXT VALUE FOR terminvorschlag_id_seq, '2024-07-09', '09:00:00', 'keine Notiz', 1, 1);
+
+-- Inserts für die Tabelle verleihauto
+INSERT INTO verleihauto (verleihauto_id, kennzeichen, marke, modell, besetzt)
+VALUES (NEXT VALUE FOR verleihauto_id_seq,'AU123XY', 'Audi', 'A4', 'N');
+
+-- Inserts für die Tabelle wartungsverlauf
+INSERT INTO wartungsverlauf (wartungsverlauf_id, datum, fahrzeug_fahrzeug_id, service_service_id, mechaniker_mechaniker_id, notiz, status)
+VALUES (NEXT VALUE FOR wartungsverlauf_id_seq, '2024-07-11', 1, 1, 1, 'Ölwechsel durchgeführt', 'ABHOLBEREIT');
+
+-- Insert for the new table Terminanfrage
+INSERT INTO terminanfrage (terminanfrage_id, datum, notiz, kunde_kunde_id, fahrzeug_fahrzeug_id, service_service_id, verwalter_verwalter_id)
+VALUES (NEXT VALUE FOR terminanfrage_id_seq, '2024-07-15', 'keine Notizen', 1, 1, 1, 1);
+
+-- Insert for the table Verleih
+INSERT INTO verleih (verleih_id, verleihDatum, rueckgabeDatum, verleihauto_verleihauto_id, verwalter_verwalter_id, kunde_kunde_id)
+VALUES (NEXT VALUE FOR verleih_id_seq, '2024-07-01', '2024-07-15', 1, 1, 1);
+

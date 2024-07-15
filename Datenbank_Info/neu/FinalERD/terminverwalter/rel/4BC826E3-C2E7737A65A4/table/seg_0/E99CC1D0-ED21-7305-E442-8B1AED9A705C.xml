@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E99CC1D0-ED21-7305-E442-8B1AED9A705C" name="Kostenvorschlag">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>D3D3D390-704F-4C40-8E70-5A3CF3BFCDEB</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kostenvrs_ID" id="CA7F0FA7-B646-31B2-E014-38AEA66675B5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>F8B38DA9-6B40-AC51-2E49-63EAEB45CA13</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="datum" id="BC7B1E99-300B-61E2-D7DC-FEDB9A731B5E">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>A63F3A47-2126-E613-74B1-AF26C706B72D</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kosten" id="F722B14D-BBAE-70EA-CB49-B77017FFB92B">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>3FB55A0F-5D0A-0260-4A89-3BCE041FA702</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="beschreibung" id="C912C216-1BD4-AEE6-E2AB-6FC4318902AC">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>E378E628-C348-4EDE-FC88-B8D90B77ED19</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reparatur_reparatur_ID" id="8BE4EA41-6BD2-68F3-B8FC-8351C9038B30">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>7AE8D978-63B4-E1F6-EF56-688232B92DB1</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B226553-2E11-BC3F-4565-2E96C5010C42" referredColumn="3576E7B8-C64E-41E5-7E92-BB4C95B11558"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EDB453BA-8EFF-15F8-30AD-650C251DD140" name="Kostenvorschlag_PK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>04F58760-1886-61F8-8D7D-68B7705C8EC5</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA7F0FA7-B646-31B2-E014-38AEA66675B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A206B01-4263-D5C3-D249-26FE4B898349" name="Kostenvorschlag__IDX">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>A98593DF-B388-9066-F70C-73457FCAD1FE</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8BE4EA41-6BD2-68F3-B8FC-8351C9038B30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4AF4DC7-5500-4161-258C-A65CAF8B8190" name="Kostenvorschlag_Reparatur_FK">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-15 06:00:14 UTC</createdTime>
+<generatorID>A98593DF-B388-9066-F70C-73457FCAD1FE</generatorID>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BE4EA41-6BD2-68F3-B8FC-8351C9038B30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

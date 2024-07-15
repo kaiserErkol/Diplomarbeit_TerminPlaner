@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="terminverwalter" id="4ACF7722-02D5-A8F5-6E65-62CB01E9DCE6" version="3.5">
+<createdBy>macbook</createdBy>
+<createdTime>2024-07-14 17:51:20 UTC</createdTime>
+<ownerDesignName>terminverwalter</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4ACF7722-02D5-A8F5-6E65-62CB01E9DCE6</designId>
+</OSDM_Design>
