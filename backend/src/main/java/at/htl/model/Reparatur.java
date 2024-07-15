@@ -2,6 +2,8 @@ package at.htl.model;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +13,8 @@ public class Reparatur {
     private int reparaturId;
 
     private String beschreibung;
+    private Date wunschtag_start; //früheste gewünschte Datum für den Beginn der Reparatur
+    private Date wunschtag_end; //späteste gewünschte Datum für den Beginn der Reparatur
 
     @ManyToOne
     @JoinColumn(name = "k_kunde_id", nullable = false)
@@ -23,6 +27,9 @@ public class Reparatur {
     @ManyToOne
     @JoinColumn(name = "rt_reptyp_id", nullable = false)
     private Reparaturtyp reparaturtyp;
+
+    @OneToMany(mappedBy = "reparatur", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Feedback> feedbackList;
 
     public Reparatur(String beschreibung, Kunde kunde, Fahrzeug fahrzeug, Reparaturtyp reparaturtyp) {
         this.beschreibung = beschreibung;
@@ -71,6 +78,14 @@ public class Reparatur {
 
     public void setReparaturtyp(Reparaturtyp reparaturtyp) {
         this.reparaturtyp = reparaturtyp;
+    }
+
+    public List<Feedback> getFeedbackList() {
+        return feedbackList;
+    }
+
+    public void setFeedbackList(List<Feedback> feedbackList) {
+        this.feedbackList = feedbackList;
     }
 
     @Override

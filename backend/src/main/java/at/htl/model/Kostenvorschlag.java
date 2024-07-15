@@ -14,15 +14,17 @@ public class Kostenvorschlag {
     private Date datum;
     private double kosten;
     private String beschreibung;
+    private char bestaetigt;
 
     @OneToOne
     @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
     private Reparatur reparatur;
 
-    public Kostenvorschlag(Date datum, double kosten, String beschreibung, Reparatur reparatur) {
+    public Kostenvorschlag(Date datum, double kosten, String beschreibung, char bestaetigt, Reparatur reparatur) {
         this.datum = datum;
         this.kosten = kosten;
         this.beschreibung = beschreibung;
+        this.bestaetigt = bestaetigt;
         this.reparatur = reparatur;
     }
 
@@ -66,6 +68,14 @@ public class Kostenvorschlag {
 
     public void setReparatur(Reparatur reparatur) {
         this.reparatur = reparatur;
+    }
+
+    public char getBestaetigt() {
+        return bestaetigt;
+    }
+
+    public void setBestaetigt(char bestaetigt) {
+        this.bestaetigt = bestaetigt;
     }
 
     @Override

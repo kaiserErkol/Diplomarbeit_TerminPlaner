@@ -1,9 +1,12 @@
 package at.htl.model;
 
+import at.htl.enums.Arbeitstagen;
 import at.htl.enums.TerminStatus;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -12,8 +15,6 @@ public class Termin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int terminId;
 
-    private Date datum;
-    private Date uhrzeit;
     private String notiz;
 
     @Enumerated(EnumType.STRING)
@@ -31,9 +32,7 @@ public class Termin {
     @JoinColumn(name = "v_verwalter_id", nullable = false)
     private Verwalter verwalter;
 
-    public Termin(Date datum, Date uhrzeit, String notiz, TerminStatus status, Terminvorschlag terminvorschlag, Reparatur reparatur, Verwalter verwalter) {
-        this.datum = datum;
-        this.uhrzeit = uhrzeit;
+    public Termin(String notiz, TerminStatus status, Terminvorschlag terminvorschlag, Reparatur reparatur, Verwalter verwalter) {
         this.notiz = notiz;
         this.status = status;
         this.terminvorschlag = terminvorschlag;
@@ -41,7 +40,8 @@ public class Termin {
         this.verwalter = verwalter;
     }
 
-    public Termin() {}
+    public Termin() {
+    }
 
     public int getTerminId() {
         return terminId;
@@ -49,22 +49,6 @@ public class Termin {
 
     public void setTerminId(int terminId) {
         this.terminId = terminId;
-    }
-
-    public Date getDatum() {
-        return datum;
-    }
-
-    public void setDatum(Date datum) {
-        this.datum = datum;
-    }
-
-    public Date getUhrzeit() {
-        return uhrzeit;
-    }
-
-    public void setUhrzeit(Date uhrzeit) {
-        this.uhrzeit = uhrzeit;
     }
 
     public Terminvorschlag getTerminvorschlag() {
@@ -112,11 +96,11 @@ public class Termin {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Termin termin = (Termin) o;
-        return terminId == termin.terminId && Objects.equals(datum, termin.datum) && Objects.equals(uhrzeit, termin.uhrzeit) && status == termin.status && Objects.equals(terminvorschlag, termin.terminvorschlag) && Objects.equals(reparatur, termin.reparatur) && Objects.equals(verwalter, termin.verwalter);
+        return terminId == termin.terminId && status == termin.status && Objects.equals(terminvorschlag, termin.terminvorschlag) && Objects.equals(reparatur, termin.reparatur) && Objects.equals(verwalter, termin.verwalter);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(terminId, datum, uhrzeit, status, terminvorschlag, reparatur, verwalter);
+        return Objects.hash(terminId,status, terminvorschlag, reparatur, verwalter);
     }
 }
