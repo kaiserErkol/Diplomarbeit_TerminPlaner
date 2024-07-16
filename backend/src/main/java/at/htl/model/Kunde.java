@@ -1,8 +1,8 @@
 package at.htl.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,9 +19,12 @@ public class Kunde {
     private String postleitzahl;
     private String ort;
     private String adresse;
-
+/*
     @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Reparatur> reparaturList;
+*/
+    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Fahrzeug> fahrzeugList;
 
     public Kunde(String vorname, String nachname, String email, String telefonnummer, String postleitzahl, String ort, String adresse) {
         this.vorname = vorname;
@@ -33,7 +36,9 @@ public class Kunde {
         this.adresse = adresse;
     }
 
-    public Kunde() {}
+    public Kunde() {
+        fahrzeugList = new LinkedList<>();
+    }
 
     public int getKundeId() {
         return kunde_id;
@@ -82,13 +87,21 @@ public class Kunde {
     public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
-
+/*
     public List<Reparatur> getReparaturList() {
         return reparaturList;
     }
 
     public void setReparaturList(List<Reparatur> reparaturList) {
         this.reparaturList = reparaturList;
+    }
+*/
+    public List<Fahrzeug> getFahrzeugList() {
+        return fahrzeugList;
+    }
+
+    public void setFahrzeugList(List<Fahrzeug> fahrzeugList) {
+        this.fahrzeugList = fahrzeugList;
     }
 
     public int getKunde_id() {
@@ -120,11 +133,11 @@ public class Kunde {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Kunde kunde = (Kunde) o;
-        return kunde_id == kunde.kunde_id && Objects.equals(vorname, kunde.vorname) && Objects.equals(nachname, kunde.nachname) && Objects.equals(email, kunde.email) && Objects.equals(telefonnummer, kunde.telefonnummer) && Objects.equals(adresse, kunde.adresse);
+        return kunde_id == kunde.kunde_id && Objects.equals(vorname, kunde.vorname) && Objects.equals(nachname, kunde.nachname) && Objects.equals(email, kunde.email) && Objects.equals(telefonnummer, kunde.telefonnummer) && Objects.equals(postleitzahl, kunde.postleitzahl) && Objects.equals(ort, kunde.ort) && Objects.equals(adresse, kunde.adresse) && Objects.equals(fahrzeugList, kunde.fahrzeugList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(kunde_id, vorname, nachname, email, telefonnummer, adresse);
+        return Objects.hash(kunde_id, vorname, nachname, email, telefonnummer, postleitzahl, ort, adresse, fahrzeugList);
     }
 }

@@ -20,7 +20,7 @@ public class Reparatur {
     @JoinColumn(name = "k_kunde_id", nullable = false)
     private Kunde kunde;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "f_fahrzeug_id", nullable = false)
     private Fahrzeug fahrzeug;
 
@@ -31,8 +31,10 @@ public class Reparatur {
     @OneToMany(mappedBy = "reparatur", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Feedback> feedbackList;
 
-    public Reparatur(String beschreibung, Kunde kunde, Fahrzeug fahrzeug, Reparaturtyp reparaturtyp) {
+    public Reparatur(String beschreibung, Date wunschtag_start, Date wunschtag_end,Kunde kunde, Fahrzeug fahrzeug, Reparaturtyp reparaturtyp) {
         this.beschreibung = beschreibung;
+        this.wunschtag_start = wunschtag_start;
+        this.wunschtag_end = wunschtag_end;
         this.kunde = kunde;
         this.fahrzeug = fahrzeug;
         this.reparaturtyp = reparaturtyp;
@@ -54,6 +56,22 @@ public class Reparatur {
 
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
+    }
+
+    public Date getWunschtag_start() {
+        return wunschtag_start;
+    }
+
+    public void setWunschtag_start(Date wunschtag_start) {
+        this.wunschtag_start = wunschtag_start;
+    }
+
+    public Date getWunschtag_end() {
+        return wunschtag_end;
+    }
+
+    public void setWunschtag_end(Date wunschtag_end) {
+        this.wunschtag_end = wunschtag_end;
     }
 
     public Kunde getKunde() {

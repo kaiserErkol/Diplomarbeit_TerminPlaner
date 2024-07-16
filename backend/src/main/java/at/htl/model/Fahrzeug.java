@@ -1,10 +1,8 @@
 package at.htl.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
@@ -21,12 +19,19 @@ public class Fahrzeug {
     private Date baujahr;     //java util
     private String zulassungsscheinRoot;
 
-    public Fahrzeug(String kennzeichen, String marke, String modell, Date baujahr, String zulassungsscheinRoot) {
+    @JsonIgnore
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "kunde_id")
+    private Kunde kunde;
+
+
+    public Fahrzeug(String kennzeichen, String marke, String modell, Date baujahr, String zulassungsscheinRoot, Kunde kunde) {
         this.kennzeichen = kennzeichen;
         this.marke = marke;
         this.modell = modell;
         this.baujahr = baujahr;
         this.zulassungsscheinRoot = zulassungsscheinRoot;
+        this.kunde = kunde;
     }
 
     public Fahrzeug() {}
@@ -79,16 +84,24 @@ public class Fahrzeug {
         this.zulassungsscheinRoot = zulassungsscheinRoot;
     }
 
+    public Kunde getKunde() {
+        return kunde;
+    }
+
+    public void setKunde(Kunde kunde) {
+        this.kunde = kunde;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fahrzeug fahrzeug = (Fahrzeug) o;
-        return fahrzeugId == fahrzeug.fahrzeugId && Objects.equals(kennzeichen, fahrzeug.kennzeichen) && Objects.equals(marke, fahrzeug.marke) && Objects.equals(modell, fahrzeug.modell) && Objects.equals(baujahr, fahrzeug.baujahr) && Objects.equals(zulassungsscheinRoot, fahrzeug.zulassungsscheinRoot);
+        return fahrzeugId == fahrzeug.fahrzeugId && Objects.equals(kennzeichen, fahrzeug.kennzeichen) && Objects.equals(marke, fahrzeug.marke) && Objects.equals(modell, fahrzeug.modell) && Objects.equals(baujahr, fahrzeug.baujahr) && Objects.equals(zulassungsscheinRoot, fahrzeug.zulassungsscheinRoot) && Objects.equals(kunde, fahrzeug.kunde);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fahrzeugId, kennzeichen, marke, modell, baujahr, zulassungsscheinRoot);
+        return Objects.hash(fahrzeugId, kennzeichen, marke, modell, baujahr, zulassungsscheinRoot, kunde);
     }
 }
