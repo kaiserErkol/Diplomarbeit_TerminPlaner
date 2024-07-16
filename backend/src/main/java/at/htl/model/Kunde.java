@@ -1,5 +1,6 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -15,16 +16,20 @@ public class Kunde {
     private String nachname;
     private String email;
     private String telefonnummer;
+    private String postleitzahl;
+    private String ort;
     private String adresse;
 
-    @OneToMany(mappedBy = "kunde", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Reparatur> reparaturList;
 
-    public Kunde(String vorname, String nachname, String email, String telefonnummer, String adresse) {
+    public Kunde(String vorname, String nachname, String email, String telefonnummer, String postleitzahl, String ort, String adresse) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.email = email;
         this.telefonnummer = telefonnummer;
+        this.postleitzahl = postleitzahl;
+        this.ort = ort;
         this.adresse = adresse;
     }
 
@@ -84,6 +89,30 @@ public class Kunde {
 
     public void setReparaturList(List<Reparatur> reparaturList) {
         this.reparaturList = reparaturList;
+    }
+
+    public int getKunde_id() {
+        return kunde_id;
+    }
+
+    public void setKunde_id(int kunde_id) {
+        this.kunde_id = kunde_id;
+    }
+
+    public String getPostleitzahl() {
+        return postleitzahl;
+    }
+
+    public void setPostleitzahl(String postleitzahl) {
+        this.postleitzahl = postleitzahl;
+    }
+
+    public String getOrt() {
+        return ort;
+    }
+
+    public void setOrt(String ort) {
+        this.ort = ort;
     }
 
     @Override

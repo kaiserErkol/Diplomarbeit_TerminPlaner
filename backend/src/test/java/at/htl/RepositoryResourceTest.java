@@ -4,7 +4,7 @@ import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.*;
 
 @QuarkusTest
 public class RepositoryResourceTest {
@@ -15,8 +15,10 @@ public class RepositoryResourceTest {
                 .when().get("/api/kunden")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0)); // Prüft, dass das Ergebnis ein leeres Array ist
+                .body("$", hasSize(greaterThan(0))) // Prüft, dass das Ergebnis ein nicht-leeres Array ist
+                .body("vorname", hasItems("Yasin", "Max", "Anna", "Lukas", "Marie", "Jonas"));
     }
+
 
     @Test
     public void testGetAllFeedback() {
@@ -33,7 +35,8 @@ public class RepositoryResourceTest {
                 .when().get("/api/fahrzeuge")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)))
+                .body("marke", hasItems("BMW", "Audi", "Mercedes", "Volkswagen", "Tesla", "Toyota"));
     }
 
     @Test

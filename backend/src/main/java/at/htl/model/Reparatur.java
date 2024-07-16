@@ -20,7 +20,7 @@ public class Reparatur {
     @JoinColumn(name = "k_kunde_id", nullable = false)
     private Kunde kunde;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "f_fahrzeug_id", nullable = false)
     private Fahrzeug fahrzeug;
 
