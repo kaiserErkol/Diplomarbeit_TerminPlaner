@@ -1,5 +1,6 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -15,6 +16,7 @@ public class Leihfahrzeug {
     private String modell;
     private char besetzt;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "leihfahrzeug", cascade = CascadeType.ALL)
     private Leihvertrag leihvertrag;
 

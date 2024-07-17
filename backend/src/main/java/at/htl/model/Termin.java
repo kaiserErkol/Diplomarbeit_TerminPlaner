@@ -34,10 +34,6 @@ public class Termin {
     @JoinColumn(name = "verwalter_id", nullable = false)
     private Verwalter verwalter;
 
-    /**
-     * #TODO
-     * Implement ManyToMany Relation to Mechaniker
-     */
 
     public Termin(String notiz, TerminStatus status, Terminvorschlag terminvorschlag, Reparatur reparatur, Verwalter verwalter) {
         this.notiz = notiz;

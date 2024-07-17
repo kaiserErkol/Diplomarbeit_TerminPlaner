@@ -105,4 +105,17 @@ public class Resource {
         return repository.getAllReparatur();
     }
 
+    @GET
+    @Path("/mechanikerZuteilung")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<MechanikerZuteilung> getAllMechanikerZuteilung() {
+        return repository.getAllMechanikerZuteilung();
+    }
+
+    @GET
+    @Path("/serviceZuteilung")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<ServiceZuteilung> getAllServiceZuteilung() {
+        return repository.getAllServiceZuteilung();
+    }
 }

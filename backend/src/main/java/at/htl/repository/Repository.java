@@ -176,4 +176,14 @@ public class Repository {
     public List<Reparatur> getAllReparatur() {
         return em.createQuery("select r from Reparatur r", Reparatur.class).getResultList();
     }
+
+    @Transactional
+    public List<MechanikerZuteilung> getAllMechanikerZuteilung() {
+        return em.createQuery("select mz from MechanikerZuteilung mz", MechanikerZuteilung.class).getResultList();
+    }
+
+    @Transactional
+    public List<ServiceZuteilung> getAllServiceZuteilung() {
+        return em.createQuery("select sz from ServiceZuteilung sz", ServiceZuteilung.class).getResultList();
+    }
 }

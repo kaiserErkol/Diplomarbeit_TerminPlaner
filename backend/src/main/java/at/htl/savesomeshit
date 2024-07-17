@@ -393,3 +393,73 @@ VALUES (NEXT VALUE FOR terminanfrage_id_seq, '2024-07-15', 'keine Notizen', 1, 1
 INSERT INTO verleih (verleih_id, verleihDatum, rueckgabeDatum, verleihauto_verleihauto_id, verwalter_verwalter_id, kunde_kunde_id)
 VALUES (NEXT VALUE FOR verleih_id_seq, '2024-07-01', '2024-07-15', 1, 1, 1);
 
+
+package at.htl.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class ReparaturMechaniker {
+    @EmbeddedId
+    private ReparaturMechaniker_id id;
+
+    @ManyToOne
+    @MapsId("reparatur_id")
+    @JoinColumn(name = "reparatur_id")
+    private Reparatur reparatur;
+
+    @ManyToOne
+    @MapsId("mechaniker_id")
+    @JoinColumn(name = "mechaniker_id")
+    private Mechaniker mechaniker;
+
+    public ReparaturMechaniker(Reparatur reparatur, Mechaniker mechaniker) {
+        this.reparatur = reparatur;
+        this.mechaniker = mechaniker;
+    }
+
+    public ReparaturMechaniker() {}
+
+    public ReparaturMechaniker_id getId() {
+        return id;
+    }
+
+    public void setId(ReparaturMechaniker_id id) {
+        this.id = id;
+    }
+
+    public Reparatur getReparatur() {
+        return reparatur;
+    }
+
+    public void setReparatur(Reparatur reparatur) {
+        this.reparatur = reparatur;
+    }
+
+    public Mechaniker getMechaniker() {
+        return mechaniker;
+    }
+
+    public void setMechaniker(Mechaniker mechaniker) {
+        this.mechaniker = mechaniker;
+    }
+}
+package at.htl.model;
+
+import jakarta.persistence.*;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+
+@Embeddable
+class ReparaturMechaniker_id implements Serializable {
+    private int termin_id;
+    private int mechaniker_id;
+
+    public ReparaturMechaniker_id() {}
+
+
+}
+
+

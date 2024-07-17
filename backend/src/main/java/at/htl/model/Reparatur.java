@@ -42,14 +42,6 @@ public class Reparatur {
     @JoinColumn(name = "eintrag_id", referencedColumnName = "eintrag_id")
     private ReparaturEintrag reparaturEintrag;
 
-    /**
-     * @TODO
-     * Fix the ManyToMany Relationship between Reparatur and Reparaturtyp
-     */
-/*
-    @OneToMany(mappedBy = "reparatur", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Reparaturtyp> reparaturtypList;
-*/
     public Reparatur(String beschreibung, Date wunschtag_start, Date wunschtag_end,Kunde kunde, Fahrzeug fahrzeug, Feedback feedback, Termin termin, Kostenvorschlag kostenvorschlag, ReparaturEintrag reparaturEintrag) {
         this.beschreibung = beschreibung;
         this.wunschtag_start = wunschtag_start;
@@ -145,27 +137,16 @@ public class Reparatur {
         this.reparaturEintrag = reparaturEintrag;
     }
 
-    /*
-    public List<Reparaturtyp> getReparaturtypList() {
-        return reparaturtypList;
-    }
-
-    public void setReparaturtypList(List<Reparaturtyp> reparaturtypList) {
-        this.reparaturtypList = reparaturtypList;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reparatur reparatur = (Reparatur) o;
-        return reparatur_id == reparatur.reparatur_id && Objects.equals(beschreibung, reparatur.beschreibung) && Objects.equals(wunschtag_start, reparatur.wunschtag_start) && Objects.equals(wunschtag_end, reparatur.wunschtag_end) && Objects.equals(kunde, reparatur.kunde) && Objects.equals(fahrzeug, reparatur.fahrzeug) && Objects.equals(feedback, reparatur.feedback) && Objects.equals(reparaturtypList, reparatur.reparaturtypList);
+        return reparatur_id == reparatur.reparatur_id && Objects.equals(beschreibung, reparatur.beschreibung) && Objects.equals(wunschtag_start, reparatur.wunschtag_start) && Objects.equals(wunschtag_end, reparatur.wunschtag_end) && Objects.equals(kunde, reparatur.kunde) && Objects.equals(fahrzeug, reparatur.fahrzeug) && Objects.equals(feedback, reparatur.feedback) && Objects.equals(termin, reparatur.termin) && Objects.equals(kostenvorschlag, reparatur.kostenvorschlag) && Objects.equals(reparaturEintrag, reparatur.reparaturEintrag);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(reparatur_id, beschreibung, wunschtag_start, wunschtag_end, kunde, fahrzeug, feedback, reparaturtypList);
+        return Objects.hash(reparatur_id, beschreibung, wunschtag_start, wunschtag_end, kunde, fahrzeug, feedback, termin, kostenvorschlag, reparaturEintrag);
     }
-    */
-
 }

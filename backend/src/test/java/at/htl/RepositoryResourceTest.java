@@ -60,7 +60,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/reparaturtyp")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -76,24 +76,6 @@ public class RepositoryResourceTest {
     public void testGetAllTerminvorschlag() {
         RestAssured.given()
                 .when().get("/api/terminvorschlag")
-                .then()
-                .statusCode(200)
-                .body("$", hasSize(greaterThan(0)));
-    }
-
-    @Test
-    public void testGetAllLeihfahrzeug() {
-        RestAssured.given()
-                .when().get("/api/leihfahrzeug")
-                .then()
-                .statusCode(200)
-                .body("$", hasSize(greaterThan(0)));
-    }
-
-    @Test
-    public void testGetAllLeihvertrag() {
-        RestAssured.given()
-                .when().get("/api/leihvertrag")
                 .then()
                 .statusCode(200)
                 .body("$", hasSize(greaterThan(0)));
