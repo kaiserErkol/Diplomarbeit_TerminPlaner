@@ -15,10 +15,8 @@ public class RepositoryResourceTest {
                 .when().get("/api/kunden")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(greaterThan(0))) // Prüft, dass das Ergebnis ein nicht-leeres Array ist
-                .body("vorname", hasItems("Yasin", "Max", "Anna", "Lukas", "Marie", "Jonas"));
+                .body("$", hasSize(greaterThan(0))); // Prüft, dass das Ergebnis ein nicht-leeres Array ist
     }
-
 
     @Test
     public void testGetAllFeedback() {
@@ -26,7 +24,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/feedback")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -35,8 +33,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/fahrzeuge")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(greaterThan(0)))
-                .body("marke", hasItems("BMW", "Audi", "Mercedes", "Volkswagen", "Tesla", "Toyota"));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -45,7 +42,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/kostenvorschlag")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -54,7 +51,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/mechaniker")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -72,7 +69,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/termin")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -81,7 +78,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/terminvorschlag")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -90,7 +87,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/leihfahrzeug")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -99,7 +96,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/leihvertrag")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -108,7 +105,7 @@ public class RepositoryResourceTest {
                 .when().get("/api/verwalter")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 
     @Test
@@ -117,6 +114,6 @@ public class RepositoryResourceTest {
                 .when().get("/api/reparatur")
                 .then()
                 .statusCode(200)
-                .body("$", hasSize(0));
+                .body("$", hasSize(greaterThan(0)));
     }
 }

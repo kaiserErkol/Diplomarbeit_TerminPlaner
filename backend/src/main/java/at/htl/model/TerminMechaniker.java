@@ -8,13 +8,13 @@ public class TerminMechaniker {
     private TerminMechanikerId id;
 
     @ManyToOne
-    @MapsId("terminId")
-    @JoinColumn(name = "t_termin_id")
+    @MapsId("termin_id")
+    @JoinColumn(name = "termin_id")
     private Termin termin;
 
     @ManyToOne
-    @MapsId("mechanikerId")
-    @JoinColumn(name = "m_mechaniker_id")
+    @MapsId("mechaniker_id")
+    @JoinColumn(name = "mechaniker_id")
     private Mechaniker mechaniker;
 
     public TerminMechaniker(Termin termin, Mechaniker mechaniker) {

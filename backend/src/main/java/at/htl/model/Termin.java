@@ -2,6 +2,7 @@ package at.htl.model;
 
 import at.htl.enums.Arbeitstagen;
 import at.htl.enums.TerminStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.Objects;
 public class Termin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int terminId;
+    private int termin_id;
 
     private String notiz;
 
@@ -21,16 +22,22 @@ public class Termin {
     private TerminStatus status;
 
     @OneToOne
-    @JoinColumn(name = "tvrs_terminvrs_id", nullable = false, unique = true)
+    @JoinColumn(name = "terminvrs_id", referencedColumnName = "terminvrs_id")
     private Terminvorschlag terminvorschlag;
 
-    @OneToOne
-    @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
+    @JsonIgnore
+    @OneToOne(mappedBy = "termin", cascade = CascadeType.ALL)
     private Reparatur reparatur;
 
-    @ManyToOne
-    @JoinColumn(name = "v_verwalter_id", nullable = false)
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "verwalter_id", nullable = false)
     private Verwalter verwalter;
+
+    /**
+     * #TODO
+     * Implement ManyToMany Relation to Mechaniker
+     */
 
     public Termin(String notiz, TerminStatus status, Terminvorschlag terminvorschlag, Reparatur reparatur, Verwalter verwalter) {
         this.notiz = notiz;
@@ -43,12 +50,12 @@ public class Termin {
     public Termin() {
     }
 
-    public int getTerminId() {
-        return terminId;
+    public int getTermin_id() {
+        return termin_id;
     }
 
-    public void setTerminId(int terminId) {
-        this.terminId = terminId;
+    public void setTermin_id(int termin_id) {
+        this.termin_id = termin_id;
     }
 
     public Terminvorschlag getTerminvorschlag() {
@@ -96,11 +103,11 @@ public class Termin {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Termin termin = (Termin) o;
-        return terminId == termin.terminId && status == termin.status && Objects.equals(terminvorschlag, termin.terminvorschlag) && Objects.equals(reparatur, termin.reparatur) && Objects.equals(verwalter, termin.verwalter);
+        return termin_id == termin.termin_id && status == termin.status && Objects.equals(terminvorschlag, termin.terminvorschlag) && Objects.equals(reparatur, termin.reparatur) && Objects.equals(verwalter, termin.verwalter);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(terminId,status, terminvorschlag, reparatur, verwalter);
+        return Objects.hash(termin_id,status, terminvorschlag, reparatur, verwalter);
     }
 }

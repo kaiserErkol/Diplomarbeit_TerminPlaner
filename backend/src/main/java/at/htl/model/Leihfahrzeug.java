@@ -1,37 +1,39 @@
 package at.htl.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
 @Entity
 public class Leihfahrzeug {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int leihfId;
+    private int leihf_id;
 
     private String kennzeichen;
     private String marke;
     private String modell;
     private char besetzt;
 
-    public Leihfahrzeug(String kennzeichen, String marke, String modell, char besetzt) {
+    @OneToOne(mappedBy = "leihfahrzeug", cascade = CascadeType.ALL)
+    private Leihvertrag leihvertrag;
+
+    public Leihfahrzeug(String kennzeichen, String marke, String modell, char besetzt, Leihvertrag leihvertrag) {
         this.kennzeichen = kennzeichen;
         this.marke = marke;
         this.modell = modell;
         this.besetzt = besetzt;
+        this.leihvertrag = leihvertrag;
     }
 
     public Leihfahrzeug() {}
 
-    public int getLeihfId() {
-        return leihfId;
+    public int getLeihf_id() {
+        return leihf_id;
     }
 
-    public void setLeihfId(int leihfId) {
-        this.leihfId = leihfId;
+    public void setLeihf_id(int leihf_id) {
+        this.leihf_id = leihf_id;
     }
 
     public String getKennzeichen() {
@@ -66,16 +68,24 @@ public class Leihfahrzeug {
         this.besetzt = besetzt;
     }
 
+    public Leihvertrag getLeihvertrag() {
+        return leihvertrag;
+    }
+
+    public void setLeihvertrag(Leihvertrag leihvertrag) {
+        this.leihvertrag = leihvertrag;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Leihfahrzeug that = (Leihfahrzeug) o;
-        return leihfId == that.leihfId && besetzt == that.besetzt && Objects.equals(kennzeichen, that.kennzeichen) && Objects.equals(marke, that.marke) && Objects.equals(modell, that.modell);
+        return leihf_id == that.leihf_id && besetzt == that.besetzt && Objects.equals(kennzeichen, that.kennzeichen) && Objects.equals(marke, that.marke) && Objects.equals(modell, that.modell);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(leihfId, kennzeichen, marke, modell, besetzt);
+        return Objects.hash(leihf_id, kennzeichen, marke, modell, besetzt);
     }
 }

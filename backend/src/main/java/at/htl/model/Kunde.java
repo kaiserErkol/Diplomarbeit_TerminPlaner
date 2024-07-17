@@ -1,5 +1,6 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.LinkedList;
@@ -19,12 +20,19 @@ public class Kunde {
     private String postleitzahl;
     private String ort;
     private String adresse;
-/*
+
     @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Reparatur> reparaturList;
-*/
+
     @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Fahrzeug> fahrzeugList;
+
+    @OneToMany(mappedBy = "kunde", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Terminvorschlag> terminvorschlagList;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "kunde", cascade = CascadeType.ALL)
+    private Leihvertrag leihvertrag;
 
     public Kunde(String vorname, String nachname, String email, String telefonnummer, String postleitzahl, String ort, String adresse) {
         this.vorname = vorname;
@@ -36,8 +44,28 @@ public class Kunde {
         this.adresse = adresse;
     }
 
+    public Kunde(String vorname, String nachname, String email, String telefonnummer, String postleitzahl, String ort, String adresse, Leihvertrag leihvertrag) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.email = email;
+        this.telefonnummer = telefonnummer;
+        this.postleitzahl = postleitzahl;
+        this.ort = ort;
+        this.adresse = adresse;
+        this.leihvertrag = leihvertrag;
+    }
+
     public Kunde() {
         fahrzeugList = new LinkedList<>();
+        reparaturList = new LinkedList<>();
+    }
+
+    public List<Terminvorschlag> getTerminvorschlagList() {
+        return terminvorschlagList;
+    }
+
+    public void setTerminvorschlagList(List<Terminvorschlag> terminvorschlagList) {
+        this.terminvorschlagList = terminvorschlagList;
     }
 
     public int getKundeId() {
@@ -87,7 +115,7 @@ public class Kunde {
     public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
-/*
+
     public List<Reparatur> getReparaturList() {
         return reparaturList;
     }
@@ -95,7 +123,7 @@ public class Kunde {
     public void setReparaturList(List<Reparatur> reparaturList) {
         this.reparaturList = reparaturList;
     }
-*/
+
     public List<Fahrzeug> getFahrzeugList() {
         return fahrzeugList;
     }
@@ -126,6 +154,14 @@ public class Kunde {
 
     public void setOrt(String ort) {
         this.ort = ort;
+    }
+
+    public Leihvertrag getLeihvertrag() {
+        return leihvertrag;
+    }
+
+    public void setLeihvertrag(Leihvertrag leihvertrag) {
+        this.leihvertrag = leihvertrag;
     }
 
     @Override

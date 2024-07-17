@@ -1,16 +1,16 @@
 package at.htl.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 public class Verwalter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int verwalterId;
+    private int verwalter_id;
 
     private String namekrzl;
     private String vorname;
@@ -19,7 +19,11 @@ public class Verwalter {
     private String email;
     private String adresse;
 
+    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<ReparaturEintrag> reparaturEintragList = new LinkedList<>();
 
+    @OneToMany(mappedBy = "verwalter", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Termin> terminList = new LinkedList<>();
 
     public Verwalter(String namekrzl, String vorname, String nachname, String telefonnummer, String email, String adresse) {
         this.namekrzl = namekrzl;
@@ -33,12 +37,12 @@ public class Verwalter {
     public Verwalter() {}
 
 
-    public int getVerwalterId() {
-        return verwalterId;
+    public int getVerwalter_id() {
+        return verwalter_id;
     }
 
-    public void setVerwalterId(int verwalterId) {
-        this.verwalterId = verwalterId;
+    public void setVerwalter_id(int verwalter_id) {
+        this.verwalter_id = verwalter_id;
     }
 
     public String getNamekrzl() {
@@ -89,16 +93,32 @@ public class Verwalter {
         this.adresse = adresse;
     }
 
+    public List<ReparaturEintrag> getReparaturEintragList() {
+        return reparaturEintragList;
+    }
+
+    public void setReparaturEintragList(List<ReparaturEintrag> reparaturEintragList) {
+        this.reparaturEintragList = reparaturEintragList;
+    }
+
+    public List<Termin> getTerminList() {
+        return terminList;
+    }
+
+    public void setTerminList(List<Termin> terminList) {
+        this.terminList = terminList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Verwalter verwalter = (Verwalter) o;
-        return verwalterId == verwalter.verwalterId && Objects.equals(namekrzl, verwalter.namekrzl) && Objects.equals(vorname, verwalter.vorname) && Objects.equals(nachname, verwalter.nachname) && Objects.equals(telefonnummer, verwalter.telefonnummer) && Objects.equals(email, verwalter.email) && Objects.equals(adresse, verwalter.adresse);
+        return verwalter_id == verwalter.verwalter_id && Objects.equals(namekrzl, verwalter.namekrzl) && Objects.equals(vorname, verwalter.vorname) && Objects.equals(nachname, verwalter.nachname) && Objects.equals(telefonnummer, verwalter.telefonnummer) && Objects.equals(email, verwalter.email) && Objects.equals(adresse, verwalter.adresse);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(verwalterId, namekrzl, vorname, nachname, telefonnummer, email, adresse);
+        return Objects.hash(verwalter_id, namekrzl, vorname, nachname, telefonnummer, email, adresse);
     }
 }

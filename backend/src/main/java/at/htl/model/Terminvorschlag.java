@@ -1,7 +1,9 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.sql.Time;
 import java.util.Date;
 import java.util.Objects;
 
@@ -9,36 +11,43 @@ import java.util.Objects;
 public class Terminvorschlag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int terminvrsId;
+    private int terminvrs_id;
 
     private Date datum;
-    private Date uhrzeit;
+    private Time uhrzeit;
     private char bestaetigt;
 
-    @OneToOne
-    @JoinColumn(name = "kvrs_kostenvrs_id", nullable = false, unique = true)
+    @JsonIgnore
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "kostenvrs_id", nullable = false)
     private Kostenvorschlag kostenvorschlag;
 
-    @ManyToOne
-    @JoinColumn(name = "k_kunde_id", nullable = false)
+    @JsonIgnore
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "kunde_id", nullable = false)
     private Kunde kunde;
 
-    public Terminvorschlag(Date datum, Date uhrzeit, char bestaetigt, Kostenvorschlag kostenvorschlag, Kunde kunde) {
+    @JsonIgnore
+    @OneToOne(mappedBy = "terminvorschlag", cascade = CascadeType.ALL)
+    private Termin termin;
+
+    public Terminvorschlag(Date datum, Time uhrzeit, char bestaetigt, Kostenvorschlag kostenvorschlag, Kunde kunde, Termin termin) {
         this.datum = datum;
         this.uhrzeit = uhrzeit;
         this.bestaetigt = bestaetigt;
         this.kostenvorschlag = kostenvorschlag;
         this.kunde = kunde;
+        this.termin = termin;
     }
 
     public Terminvorschlag() {}
 
-    public int getTerminvrsId() {
-        return terminvrsId;
+    public Termin getTermin() {
+        return termin;
     }
 
-    public void setTerminvrsId(int terminvrsId) {
-        this.terminvrsId = terminvrsId;
+    public void setTermin(Termin termin) {
+        this.termin = termin;
     }
 
     public Date getDatum() {
@@ -49,11 +58,11 @@ public class Terminvorschlag {
         this.datum = datum;
     }
 
-    public Date getUhrzeit() {
+    public Time getUhrzeit() {
         return uhrzeit;
     }
 
-    public void setUhrzeit(Date uhrzeit) {
+    public void setUhrzeit(Time uhrzeit) {
         this.uhrzeit = uhrzeit;
     }
 
@@ -81,16 +90,24 @@ public class Terminvorschlag {
         this.kunde = kunde;
     }
 
+    public int getTerminvrs_id() {
+        return terminvrs_id;
+    }
+
+    public void setTerminvrs_id(int terminvrs_id) {
+        this.terminvrs_id = terminvrs_id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Terminvorschlag that = (Terminvorschlag) o;
-        return terminvrsId == that.terminvrsId && bestaetigt == that.bestaetigt && Objects.equals(datum, that.datum) && Objects.equals(uhrzeit, that.uhrzeit) && Objects.equals(kostenvorschlag, that.kostenvorschlag) && Objects.equals(kunde, that.kunde);
+        return terminvrs_id == that.terminvrs_id && bestaetigt == that.bestaetigt && Objects.equals(datum, that.datum) && Objects.equals(uhrzeit, that.uhrzeit) && Objects.equals(kostenvorschlag, that.kostenvorschlag) && Objects.equals(kunde, that.kunde);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(terminvrsId, datum, uhrzeit, bestaetigt, kostenvorschlag, kunde);
+        return Objects.hash(terminvrs_id, datum, uhrzeit, bestaetigt, kostenvorschlag, kunde);
     }
 }

@@ -153,8 +153,8 @@ public class Repository {
     }
 
     @Transactional
-    public List<Termin> getAllTerminvorschlag() {
-        return em.createQuery("SELECT tv FROM Terminvorschlag tv", Termin.class).getResultList();
+    public List<Terminvorschlag> getAllTerminvorschlag() {
+        return em.createQuery("SELECT tv FROM Terminvorschlag tv", Terminvorschlag.class).getResultList();
     }
 
     @Transactional

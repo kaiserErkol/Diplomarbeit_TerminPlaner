@@ -8,8 +8,8 @@ import java.util.Objects;
 
 @Embeddable
 class TerminMechanikerId implements Serializable {
-    private int terminId;
-    private int mechanikerId;
+    private int termin_id;
+    private int mechaniker_id;
 
     public TerminMechanikerId() {}
 
@@ -18,11 +18,11 @@ class TerminMechanikerId implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TerminMechanikerId that = (TerminMechanikerId) o;
-        return terminId == that.terminId && mechanikerId == that.mechanikerId;
+        return termin_id == that.termin_id && mechaniker_id == that.mechaniker_id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(terminId, mechanikerId);
+        return Objects.hash(termin_id, mechaniker_id);
     }
 }

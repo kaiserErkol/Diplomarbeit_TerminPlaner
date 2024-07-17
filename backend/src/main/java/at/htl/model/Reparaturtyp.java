@@ -1,36 +1,41 @@
 package at.htl.model;
 
 import at.htl.enums.Klassifikation;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Reparaturtyp {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int retypId;
+    private int retyp_id;
 
     private String bezeichnung;
+    private String beschreibung;
     private int dauerinmin;
 
     @Enumerated(EnumType.STRING)
     private Klassifikation klassifikation;
 
-    public Reparaturtyp(String bezeichnung, int dauerinmin, Klassifikation klassifikation) {
+    /*
+    @JsonIgnore
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "reparatur_id", nullable = false)
+    private Reparatur reparatur;
+*/
+    public Reparaturtyp(String bezeichnung, String beschreibung, int dauerinmin, Klassifikation klassifikation) {
+        //this.reparatur = reparatur;
         this.bezeichnung = bezeichnung;
+        this.beschreibung = beschreibung;
         this.dauerinmin = dauerinmin;
         this.klassifikation = klassifikation;
     }
 
-    public Reparaturtyp() {}
-
-    public int getRetypId() {
-        return retypId;
-    }
-
-    public void setRetypId(int retypId) {
-        this.retypId = retypId;
+    public Reparaturtyp() {
     }
 
     public String getBezeichnung() {
@@ -57,16 +62,42 @@ public class Reparaturtyp {
         this.klassifikation = klassifikation;
     }
 
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
+    }
+
+    public int getRetyp_id() {
+        return retyp_id;
+    }
+
+    public void setRetyp_id(int retyp_id) {
+        this.retyp_id = retyp_id;
+    }
+/*
+    public Reparatur getReparatur() {
+        return reparatur;
+    }
+
+    public void setReparatur(Reparatur reparatur) {
+        this.reparatur = reparatur;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reparaturtyp that = (Reparaturtyp) o;
-        return retypId == that.retypId && dauerinmin == that.dauerinmin && Objects.equals(bezeichnung, that.bezeichnung) && Objects.equals(klassifikation, that.klassifikation);
+        return retyp_id == that.retyp_id && dauerinmin == that.dauerinmin && Objects.equals(bezeichnung, that.bezeichnung) && Objects.equals(beschreibung, that.beschreibung) && klassifikation == that.klassifikation && Objects.equals(reparatur, that.reparatur);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(retypId, bezeichnung, dauerinmin, klassifikation);
+        return Objects.hash(retyp_id, bezeichnung, beschreibung, dauerinmin, klassifikation, reparatur);
     }
+    */
+
 }

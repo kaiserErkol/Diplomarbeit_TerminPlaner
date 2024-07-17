@@ -1,24 +1,30 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 public class Kostenvorschlag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int kostenvrsId;
+    private int kostenvrs_id;
 
     private Date datum;
     private double kosten;
     private String beschreibung;
     private char bestaetigt;
 
-    @OneToOne
-    @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
+    @JsonIgnore
+    @OneToOne (mappedBy = "kostenvorschlag", cascade = CascadeType.ALL)
     private Reparatur reparatur;
+
+    @OneToMany (mappedBy = "kostenvorschlag", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Terminvorschlag> terminvorschlagList = new LinkedList<>();
 
     public Kostenvorschlag(Date datum, double kosten, String beschreibung, char bestaetigt, Reparatur reparatur) {
         this.datum = datum;
@@ -30,12 +36,12 @@ public class Kostenvorschlag {
 
     public Kostenvorschlag() {}
 
-    public int getKostenvrsId() {
-        return kostenvrsId;
+    public int getKostenvrs_id() {
+        return kostenvrs_id;
     }
 
-    public void setKostenvrsId(int kostenvrsId) {
-        this.kostenvrsId = kostenvrsId;
+    public void setKostenvrs_id(int kostenvrs_id) {
+        this.kostenvrs_id = kostenvrs_id;
     }
 
     public Date getDatum() {
@@ -78,17 +84,25 @@ public class Kostenvorschlag {
         this.bestaetigt = bestaetigt;
     }
 
+    public List<Terminvorschlag> getTerminvorschlagList() {
+        return terminvorschlagList;
+    }
+
+    public void setTerminvorschlagList(List<Terminvorschlag> terminvorschlagList) {
+        this.terminvorschlagList = terminvorschlagList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Kostenvorschlag that = (Kostenvorschlag) o;
-        return kostenvrsId == that.kostenvrsId && Double.compare(kosten, that.kosten) == 0 && Objects.equals(datum, that.datum) && Objects.equals(beschreibung, that.beschreibung) && Objects.equals(reparatur, that.reparatur);
+        return kostenvrs_id == that.kostenvrs_id && Double.compare(kosten, that.kosten) == 0 && Objects.equals(datum, that.datum) && Objects.equals(beschreibung, that.beschreibung) && Objects.equals(reparatur, that.reparatur);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(kostenvrsId, datum, kosten, beschreibung, reparatur);
+        return Objects.hash(kostenvrs_id, datum, kosten, beschreibung, reparatur);
     }
 }
 

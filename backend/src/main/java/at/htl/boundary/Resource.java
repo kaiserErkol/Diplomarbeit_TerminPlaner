@@ -73,7 +73,7 @@ public class Resource {
     @GET
     @Path("/terminvorschlag")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Termin> getAllTerminvorschlag() {
+    public List<Terminvorschlag> getAllTerminvorschlag() {
         return repository.getAllTerminvorschlag();
     }
 

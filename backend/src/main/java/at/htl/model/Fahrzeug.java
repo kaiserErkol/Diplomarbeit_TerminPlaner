@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -21,9 +22,11 @@ public class Fahrzeug {
 
     @JsonIgnore
     @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name = "kunde_id")
+    @JoinColumn(name = "kunde_id", nullable = false)
     private Kunde kunde;
 
+    @OneToMany(mappedBy = "fahrzeug", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Reparatur> reparaturList;
 
     public Fahrzeug(String kennzeichen, String marke, String modell, Date baujahr, String zulassungsscheinRoot, Kunde kunde) {
         this.kennzeichen = kennzeichen;
@@ -90,6 +93,14 @@ public class Fahrzeug {
 
     public void setKunde(Kunde kunde) {
         this.kunde = kunde;
+    }
+
+    public List<Reparatur> getReparaturList() {
+        return reparaturList;
+    }
+
+    public void setReparaturList(List<Reparatur> reparaturList) {
+        this.reparaturList = reparaturList;
     }
 
     @Override

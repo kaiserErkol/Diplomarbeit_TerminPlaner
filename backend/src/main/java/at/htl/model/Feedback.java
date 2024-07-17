@@ -1,5 +1,6 @@
 package at.htl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -8,13 +9,13 @@ import java.util.Objects;
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int feedbackId;
+    private int feedback_id;
 
     private String bewertung;
     private String kommentar;
 
-    @ManyToOne
-    @JoinColumn(name = "r_reparatur_id", nullable = false)
+    @JsonIgnore
+    @OneToOne(mappedBy = "feedback", cascade = CascadeType.ALL)
     private Reparatur reparatur;
 
     public Feedback(String bewertung, String kommentar, Reparatur reparatur) {
@@ -25,12 +26,12 @@ public class Feedback {
 
     public Feedback() {}
 
-    public int getFeedbackId() {
-        return feedbackId;
+    public int getFeedback_id() {
+        return feedback_id;
     }
 
-    public void setFeedbackId(int feedbackId) {
-        this.feedbackId = feedbackId;
+    public void setFeedback_id(int feedback_id) {
+        this.feedback_id = feedback_id;
     }
 
     public String getBewertung() {
@@ -59,15 +60,14 @@ public class Feedback {
 
     @Override
     public boolean equals(Object o) {
-
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Feedback feedback = (Feedback) o;
-        return feedbackId == feedback.feedbackId && Objects.equals(bewertung, feedback.bewertung) && Objects.equals(kommentar, feedback.kommentar) && Objects.equals(reparatur, feedback.reparatur);
+        return feedback_id == feedback.feedback_id && Objects.equals(bewertung, feedback.bewertung) && Objects.equals(kommentar, feedback.kommentar) && Objects.equals(reparatur, feedback.reparatur);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(feedbackId, bewertung, kommentar, reparatur);
+        return Objects.hash(feedback_id, bewertung, kommentar, reparatur);
     }
 }

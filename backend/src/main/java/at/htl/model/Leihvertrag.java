@@ -15,11 +15,11 @@ public class Leihvertrag {
     private Date rueckgabedatum;
 
     @OneToOne
-    @JoinColumn(name = "k_kunde_id", nullable = false, unique = true)
+    @JoinColumn(name = "kunde_id", referencedColumnName = "kunde_id")
     private Kunde kunde;
 
     @OneToOne
-    @JoinColumn(name = "lf_leihf_id", nullable = false, unique = true)
+    @JoinColumn(name = "leihf_id", referencedColumnName = "leihf_id")
     private Leihfahrzeug leihfahrzeug;
 
     public Leihvertrag(Date ausleihdatum, Date rueckgabedatum, Kunde kunde, Leihfahrzeug leihfahrzeug) {

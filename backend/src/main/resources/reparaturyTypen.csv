@@ -1,0 +1,15 @@
+Dienstleistung, Beschreibung, Kategorie, DauerInMin
+Getriebe-Reparatur, "Eine umfassende und komplexe Reparatur, die den Austausch oder die Instandsetzung des Getriebes umfasst.", GROSSE_REPARATUR, 0
+Bremsenservice, "Eine Routinewartung, die die Überprüfung, Reinigung und gegebenenfalls den Austausch der Bremsbeläge und -scheiben beinhaltet.", , 80
+Direktabwicklung, "Ein flexibler Service, der je nach Bedarf sowohl kleine als auch große Reparaturen umfassen kann.", NICHT_BESTIMMT, 0
+Service nach Herstellervorgabe, "Ein Wartungsservice, der den spezifischen Vorgaben des Fahrzeugherstellers folgt und sowohl kleinere als auch umfangreichere Reparaturen umfassen kann.", NICHT_BESTIMMT, 0
+Klima-Service, "Eine Wartung des Klimaanlagensystems, inklusive Überprüfung und Auffüllung des Kältemittels.", KLEINE_REPARATUR, 80
+Felgen/Reifen-Service, "Ein Service, der das Wechseln, Auswuchten und eventuell die Reparatur von Reifen und Felgen beinhaltet.", KLEINE_REPARATUR, 60
+Turbolader-Reparatur, "Eine größere Reparatur, die den Austausch oder die Instandsetzung des Turboladers umfasst.", GROSSE_REPARATUR, 0
+Ersatzteile, "Austausch oder Einbau von Ersatzteilen, oft als Teil einer kleineren Reparatur.", KLEINE_REPARATUR, 90
+Windschutzscheiben-Service, "Umfassende Reparatur oder Austausch der Windschutzscheibe bei Schäden oder Rissen.", GROSSE_REPARATUR, 0
+Lack-Instandsetzung, "Reparatur von Lackschäden, wie Kratzer, Dellen oder größere Lackierarbeiten.", GROSSE_REPARATUR, 0
+Karosserie-Arbeiten, "Umfangreiche Reparaturen an der Fahrzeugkarosserie, die bei Unfallschäden oder Rost erforderlich sind.", GROSSE_REPARATUR, 0
+Zahnriemen-Service, "Eine wichtige Wartungsarbeit, die den Austausch des Zahnriemens umfasst, um Motorschäden zu vermeiden.", GROSSE_REPARATUR, 0
+Fahrzeug-Tuning, "Eine umfassende Modifikation des Fahrzeugs zur Leistungssteigerung oder optischen Verbesserung.", GROSSE_REPARATUR, 0
+Pickerl-Überprüfungen, "Eine gesetzlich vorgeschriebene Überprüfung des Fahrzeugs auf Verkehrstauglichkeit und Sicherheit.", KLEINE_REPARATUR, 60

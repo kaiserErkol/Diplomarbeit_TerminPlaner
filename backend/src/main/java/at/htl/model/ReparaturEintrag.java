@@ -1,6 +1,8 @@
 package at.htl.model;
 
 import at.htl.enums.ReparaturStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -10,20 +12,23 @@ import java.util.Objects;
 public class ReparaturEintrag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int eintragId;
+    private int eintrag_id;
 
     private String beschreibung;
+
+    @Column(nullable = true)
     private Date abschlussdatum;
 
     @Enumerated(EnumType.STRING)
     private ReparaturStatus status;
 
-    @OneToOne
-    @JoinColumn(name = "r_reparatur_id", nullable = false, unique = true)
+    @JsonIgnore
+    @OneToOne (mappedBy = "reparaturEintrag", cascade = CascadeType.ALL)
     private Reparatur reparatur;
 
-    @ManyToOne
-    @JoinColumn(name = "v_verwalter_id", nullable = false)
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "verwalter_id", nullable = false)
     private Verwalter verwalter;
 
     public ReparaturEintrag(String beschreibung, Date abschlussdatum, ReparaturStatus status, Reparatur reparatur, Verwalter verwalter) {
@@ -36,12 +41,12 @@ public class ReparaturEintrag {
 
     public ReparaturEintrag() {}
 
-    public int getEintragId() {
-        return eintragId;
+    public int getEintrag_id() {
+        return eintrag_id;
     }
 
-    public void setEintragId(int eintragId) {
-        this.eintragId = eintragId;
+    public void setEintrag_id(int eintrag_id) {
+        this.eintrag_id = eintrag_id;
     }
 
     public String getBeschreibung() {
@@ -89,11 +94,11 @@ public class ReparaturEintrag {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ReparaturEintrag that = (ReparaturEintrag) o;
-        return eintragId == that.eintragId && Objects.equals(beschreibung, that.beschreibung) && Objects.equals(abschlussdatum, that.abschlussdatum) && Objects.equals(status, that.status) && Objects.equals(reparatur, that.reparatur) && Objects.equals(verwalter, that.verwalter);
+        return eintrag_id == that.eintrag_id && Objects.equals(beschreibung, that.beschreibung) && Objects.equals(abschlussdatum, that.abschlussdatum) && Objects.equals(status, that.status) && Objects.equals(reparatur, that.reparatur) && Objects.equals(verwalter, that.verwalter);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(eintragId, beschreibung, abschlussdatum, status, reparatur, verwalter);
+        return Objects.hash(eintrag_id, beschreibung, abschlussdatum, status, reparatur, verwalter);
     }
 }
